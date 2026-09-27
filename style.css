@@ -259,7 +259,7 @@ button:hover {
     width: 100%;
     min-height: 100vh;
 
-    display: none;
+    display: none !important;
 
     flex-direction: column;
     justify-content: center;

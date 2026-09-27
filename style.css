@@ -25,6 +25,145 @@ body {
 
 
 /* ================================= */
+/* CORAÇÕES E ESTRELINHAS */
+/* ================================= */
+
+.coracoes {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.coracoes span {
+    position: absolute;
+    display: block;
+
+    bottom: -50px;
+
+    font-size: 25px;
+    line-height: 1;
+
+    color: #ff9fc5;
+    opacity: 0;
+
+    animation: subirCoracao 12s linear infinite;
+}
+
+/* POSIÇÕES INDIVIDUAIS */
+
+.coracoes span:nth-child(1) {
+    left: 5%;
+    animation-delay: -2s;
+    animation-duration: 12s;
+}
+
+.coracoes span:nth-child(2) {
+    left: 15%;
+    animation-delay: -5s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.coracoes span:nth-child(3) {
+    left: 25%;
+    animation-delay: -8s;
+    animation-duration: 11s;
+}
+
+.coracoes span:nth-child(4) {
+    left: 35%;
+    animation-delay: -3s;
+    animation-duration: 14s;
+    color: #ffe5b4;
+}
+
+.coracoes span:nth-child(5) {
+    left: 45%;
+    animation-delay: -10s;
+    animation-duration: 13s;
+}
+
+.coracoes span:nth-child(6) {
+    left: 55%;
+    animation-delay: -6s;
+    animation-duration: 16s;
+    color: #ffe5b4;
+}
+
+.coracoes span:nth-child(7) {
+    left: 65%;
+    animation-delay: -1s;
+    animation-duration: 12s;
+}
+
+.coracoes span:nth-child(8) {
+    left: 75%;
+    animation-delay: -9s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.coracoes span:nth-child(9) {
+    left: 85%;
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.coracoes span:nth-child(10) {
+    left: 95%;
+    animation-delay: -7s;
+    animation-duration: 14s;
+}
+
+.coracoes span:nth-child(11) {
+    left: 30%;
+    animation-delay: -11s;
+    animation-duration: 17s;
+    color: #ffe5b4;
+}
+
+.coracoes span:nth-child(12) {
+    left: 70%;
+    animation-delay: -5s;
+    animation-duration: 11s;
+}
+
+
+/* ANIMAÇÃO DOS CORAÇÕES */
+
+@keyframes subirCoracao {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* ================================= */
 /* SISTEMA DE TELAS */
 /* ================================= */
 
@@ -69,28 +208,24 @@ body {
 h1 {
     font-size: 45px;
     color: #ffc4db;
-
     margin-bottom: 25px;
 }
 
 h2 {
     font-size: 34px;
     color: #ffc4db;
-
     margin-bottom: 25px;
 }
 
 p {
     font-size: 18px;
     line-height: 1.7;
-
     margin-bottom: 20px;
 }
 
 .decoracao {
     color: #ff91bd;
     font-size: 35px;
-
     margin-bottom: 25px;
 }
 
@@ -156,12 +291,7 @@ button:hover {
 
     animation:
         flutuarKamijo 2.5s ease-in-out infinite;
-
-    will-change: transform;
 }
-
-
-/* BALÃO */
 
 .balao {
     position: relative;
@@ -182,9 +312,6 @@ button:hover {
     box-shadow: 0 5px 20px #0005;
 }
 
-
-/* PONTINHA DO BALÃO */
-
 .balao::after {
     content: "";
 
@@ -199,9 +326,6 @@ button:hover {
     border-right: 12px solid transparent;
     border-top: 14px solid white;
 }
-
-
-/* FOTO DO KAMIJO */
 
 .kamijo-flutuante img {
     width: 180px;
@@ -445,62 +569,8 @@ button:hover {
 
 
 /* ================================= */
-/* CORAÇÕES E ESTRELINHAS */
+/* OUTRAS ANIMAÇÕES */
 /* ================================= */
-
-#coracoes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.coracao-flutuante {
-    position: absolute;
-    display: block;
-    bottom: -60px;
-    opacity: 0;
-    animation-name: subirCoracao;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-/* ================================= */
-/* ANIMAÇÕES */
-/* ================================= */
-
-@keyframes subirCoracao {
-
-    0% {
-        transform:
-            translateY(0)
-            rotate(0deg);
-
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.65;
-    }
-
-    85% {
-        opacity: 0.65;
-    }
-
-    100% {
-        transform:
-            translateY(-120vh)
-            rotate(360deg);
-
-        opacity: 0;
-    }
-
-}
-
 
 @keyframes flutuarKamijo {
 
@@ -513,7 +583,6 @@ button:hover {
     }
 
 }
-
 
 @keyframes aparecer {
 
@@ -528,7 +597,6 @@ button:hover {
     }
 
 }
-
 
 @keyframes pulsar {
 
@@ -609,14 +677,14 @@ button:hover {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .coracao-flutuante,
+    .coracoes span,
     .kamijo-flutuante,
     .eu-te-amo,
     .tela.ativa {
         animation: none;
     }
 
-    .coracao-flutuante {
+    .coracoes span {
         display: none;
     }
 

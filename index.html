@@ -1,84 +1,314 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>PRO DABI!!!!</title>
-
+    <title>PRO DABI!!!! ♡</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- TELA 1 -->
+    <!-- TELA 1: INÍCIO -->
+
     <section class="tela inicio ativa">
+        <div class="conteudo">
+            <span class="decoracao">♡ ✧ ♡</span>
 
-        <h1>oi dabizinho!</h1>
+            <h1>oi dabizinho!</h1>
 
-        <p>
-            FELIZ ANIVERSÁRIO!!!!<br>
-            olha a sua surpresa!!!
-        </p>
+            <p>
+                FELIZ ANIVERSÁRIO!!!!<br>
+                olha a sua surpresa!!!
+            </p>
 
-        <button onclick="iniciarSurpresa()">
-            iniciar
-        </button>
-
+            <button onclick="trocarTela(1)">
+                iniciar ♡
+            </button>
+        </div>
     </section>
 
 
-    <!-- TELA 2 -->
+    <!-- TELA 2: KAMIJO -->
+
     <section class="tela surpresa">
+        <div class="conteudo">
 
-        <h2>feliz aniversário, meu amor ❤️</h2>
+            <h2>feliz aniversário, meu amor ♡</h2>
 
-        <p>
-            eu quero te mostrar o quão especial você é pra mim
-            e pra todo mundo ao seu redor!
-        </p>
+            <p>
+                eu quero te mostrar o quão especial
+                você é pra mim e pra todo mundo
+                ao seu redor!
+            </p>
 
-        <p>
-            nosso amante de visual kei e jogos antigos!
-        </p>
+            <p>
+                nosso amante de visual kei
+                e jogos antigos!
+            </p>
 
+            <div class="kamijo-flutuante">
 
-        <div class="kamijo-flutuante">
+                <div class="balao">
+                    eu kamijo do versailles do larmia
+                    de tudo te desejo um feliz
+                    aniversário dabi! ♡
+                </div>
 
-            <div class="balao">
-                eu kamijo do versailles do larmia de tudo
-                te desejo um feliz aniversário dabi! ♡
+                <img src="imagens/kamijo1.jpg"
+                     alt="Kamijo">
+
             </div>
 
-            <img src="imagens/kamijo1.jpg" alt="Kamijo">
+            <button onclick="trocarTela(2)">
+                continuar ♡
+            </button>
 
         </div>
-
-
-        <button class="botao-continuar" onclick="mostrarHistoria()">
-            continuar ♡
-        </button>
-
     </section>
 
 
-    <!-- TELA 3 -->
-    <section class="tela historia">
+    <!-- TELA 3: INTRODUÇÃO -->
 
-        <h2>agora falando sério...</h2>
+    <section class="tela introducao">
+        <div class="conteudo">
 
-        <p>
-            eu queria fazer isso pra te lembrar de algumas coisinhas ♡
-        </p>
+            <span class="decoracao">✧ ♡ ✧</span>
 
-        <h3>primeiro: nós dois.</h3>
+            <h2>hoje é sobre você.</h2>
 
+            <div class="cartinha">
+
+                <p>
+                    [Escreva aqui uma introdução
+                    sobre o aniversário dele.]
+                </p>
+
+                <p>
+                    [Conte por que você quis
+                    preparar esse presente.]
+                </p>
+
+                <p>
+                    [Uma frase bonitinha para
+                    terminar a introdução.]
+                </p>
+
+            </div>
+
+            <button onclick="trocarTela(3)">
+                continuar ♡
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 4: COISAS QUE EU AMO -->
+
+    <section class="tela qualidades">
+        <div class="conteudo">
+
+            <h2>coisas que eu amo em você ♡</h2>
+
+            <p>
+                clica nas cartinhas!
+            </p>
+
+            <div class="grade-cartoes">
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">seu sorriso ♡</div>
+                    <div class="verso">
+                        [Escreva por que você ama
+                        o sorriso dele.]
+                    </div>
+                </div>
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">seu jeitinho</div>
+                    <div class="verso">
+                        [Escreva sobre a
+                        personalidade dele.]
+                    </div>
+                </div>
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">suas manias</div>
+                    <div class="verso">
+                        [Coloque uma mania
+                        engraçada ou fofa.]
+                    </div>
+                </div>
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">seu coração</div>
+                    <div class="verso">
+                        [Escreva sobre como
+                        ele trata as pessoas.]
+                    </div>
+                </div>
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">seu humor</div>
+                    <div class="verso">
+                        [Uma piada interna
+                        ou algo que ele faz.]
+                    </div>
+                </div>
+
+                <div class="cartao" onclick="virarCartao(this)">
+                    <div class="frente">ser você ♡</div>
+                    <div class="verso">
+                        [Uma mensagem especial
+                        sobre quem ele é.]
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="trocarTela(4)">
+                continuar ♡
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 5: COISAS QUE LEMBRAM ELE -->
+
+    <section class="tela favoritos">
+        <div class="conteudo">
+
+            <h2>coisas que têm a sua cara</h2>
+
+            <p>
+                pequenas coisas que sempre
+                me fazem lembrar de você ♡
+            </p>
+
+            <div class="grade-favoritos">
+
+                <div class="item-favorito">
+                    <span>🎸</span>
+                    <h3>visual kei</h3>
+                    <p>[Escreva aqui.]</p>
+                </div>
+
+                <div class="item-favorito">
+                    <span>🎮</span>
+                    <h3>jogos antigos</h3>
+                    <p>[Escreva aqui.]</p>
+                </div>
+
+                <div class="item-favorito">
+                    <span>🎵</span>
+                    <h3>suas músicas</h3>
+                    <p>[Escreva aqui.]</p>
+                </div>
+
+                <div class="item-favorito">
+                    <span>♡</span>
+                    <h3>suas coisinhas</h3>
+                    <p>[Escreva aqui.]</p>
+                </div>
+
+            </div>
+
+            <button onclick="trocarTela(5)">
+                continuar ♡
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 6: PELOS MEUS OLHOS -->
+
+    <section class="tela meus-olhos">
+        <div class="conteudo">
+
+            <span class="decoracao">♡</span>
+
+            <h2>você pelos meus olhos</h2>
+
+            <div class="moldura-foto">
+                <div class="espaco-foto">
+                    coloque uma foto dele aqui ♡
+                </div>
+                <p>meu menino favorito</p>
+            </div>
+
+            <div class="texto-especial">
+                <p>
+                    [Escreva aqui como você
+                    enxerga ele.]
+                </p>
+
+                <p>
+                    [Fale sobre o que você admira
+                    nele e o que o torna especial.]
+                </p>
+            </div>
+
+            <button onclick="trocarTela(6)">
+                continuar ♡
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA 7: CARTA FINAL -->
+
+    <section class="tela final">
+        <div class="conteudo">
+
+            <span class="decoracao">✧ ♡ ✧</span>
+
+            <h2>feliz aniversário, meu amor.</h2>
+
+            <div class="carta-final">
+
+                <p>meu dabizinho,</p>
+
+                <p>
+                    [Comece sua declaração
+                    de aniversário aqui.]
+                </p>
+
+                <p>
+                    [Escreva tudo que você
+                    deseja para ele.]
+                </p>
+
+                <p>
+                    [Termine com uma mensagem
+                    bem especial.]
+                </p>
+
+                <p class="assinatura">
+                    com todo meu amor,<br>
+                    sua namorada ♡
+                </p>
+
+            </div>
+
+            <h2 class="eu-te-amo">eu te amo ♡</h2>
+
+            <button onclick="trocarTela(0)">
+                ver tudo de novo ♡
+            </button>
+
+        </div>
     </section>
 
 
     <script src="script.js"></script>
 
 </body>
-
 </html>

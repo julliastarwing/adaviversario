@@ -15,6 +15,7 @@ function mostrarHistoria() {
     const historia = document.querySelector(".historia");
 
     surpresa.style.display = "none";
-    historia.style.display = "flex";
+
+    historia.style.setProperty("display", "flex", "important");
 
 }

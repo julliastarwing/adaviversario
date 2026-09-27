@@ -1,5 +1,5 @@
 /* ============================= */
-/* CONFIGURAÇÕES GERAIS */
+/* GERAL */
 /* ============================= */
 
 * {
@@ -19,26 +19,39 @@ body {
 
 
 /* ============================= */
-/* TELA INICIAL */
+/* SISTEMA DE TELAS */
 /* ============================= */
 
-.inicio {
+.tela {
+    display: none;
+
     width: 100%;
     min-height: 100vh;
 
-    display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
     text-align: center;
 
-    padding: 30px;
+    padding: 40px 20px;
 }
+
+
+/* SOMENTE A TELA ATIVA APARECE */
+
+.tela.ativa {
+    display: flex;
+}
+
+
+/* ============================= */
+/* TELA INICIAL */
+/* ============================= */
 
 .inicio h1 {
     font-size: 45px;
+
     margin-bottom: 20px;
 }
 
@@ -51,7 +64,7 @@ body {
 
 
 /* ============================= */
-/* BOTÃO */
+/* BOTÕES */
 /* ============================= */
 
 button {
@@ -67,7 +80,7 @@ button {
 
     cursor: pointer;
 
-    transition: transform 0.3s, background-color 0.3s;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -78,24 +91,8 @@ button:hover {
 
 
 /* ============================= */
-/* SEGUNDA TELA */
+/* TELA DO KAMIJO */
 /* ============================= */
-
-.surpresa {
-    width: 100%;
-    min-height: 100vh;
-
-    display: none;
-
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 40px 20px;
-}
 
 .surpresa h2 {
     font-size: 35px;
@@ -114,27 +111,42 @@ button:hover {
 
 
 /* ============================= */
-/* KAMIJO + BALÃO */
+/* KAMIJO FLUTUANTE */
 /* ============================= */
 
 .kamijo-flutuante {
-    margin-top: 45px;
-
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
     align-items: center;
 
-    /* FAZ O CONJUNTO INTEIRO FLUTUAR */
+    margin-top: 40px;
+
     animation: flutuarKamijo 2.5s ease-in-out infinite;
 
     will-change: transform;
 }
 
 
+@keyframes flutuarKamijo {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
 /* ============================= */
-/* BALÃO DE FALA */
+/* BALÃO */
 /* ============================= */
 
 .balao {
@@ -157,8 +169,6 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-
-/* PONTINHA DO BALÃO */
 
 .balao::after {
     content: "";
@@ -193,23 +203,34 @@ button:hover {
 
 
 /* ============================= */
-/* ANIMAÇÃO DO KAMIJO */
+/* BOTÃO CONTINUAR */
 /* ============================= */
 
-@keyframes flutuarKamijo {
+.botao-continuar {
+    margin-top: 25px;
+}
 
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(-30px);
-    }
+/* ============================= */
+/* TELA 3 */
+/* ============================= */
 
-    100% {
-        transform: translateY(0);
-    }
+.historia h2 {
+    font-size: 35px;
 
+    margin-bottom: 20px;
+}
+
+.historia p {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.historia h3 {
+    font-size: 25px;
+
+    color: #ff8bb3;
 }
 
 
@@ -223,11 +244,13 @@ button:hover {
         font-size: 35px;
     }
 
-    .surpresa h2 {
+    .surpresa h2,
+    .historia h2 {
         font-size: 28px;
     }
 
-    .surpresa > p {
+    .surpresa > p,
+    .historia p {
         font-size: 16px;
     }
 
@@ -238,49 +261,8 @@ button:hover {
 
     .balao {
         max-width: 250px;
+
         font-size: 14px;
     }
 
-}
-/* ============================= */
-/* BOTÃO CONTINUAR */
-/* ============================= */
-
-.botao-continuar {
-    margin-top: 20px;
-}
-
-
-/* ============================= */
-/* NOSSA HISTÓRIA */
-/* ============================= */
-
-.historia {
-    width: 100%;
-    min-height: 100vh;
-
-    display: none !important;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 40px 20px;
-}
-
-.historia h2 {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.historia p {
-    font-size: 18px;
-    margin-bottom: 35px;
-}
-
-.historia h3 {
-    font-size: 25px;
-    color: #ff8bb3;
 }

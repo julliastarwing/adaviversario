@@ -7,3 +7,14 @@ function iniciarSurpresa() {
     surpresa.style.display = "flex";
 
 }
+
+
+function mostrarHistoria() {
+
+    const surpresa = document.querySelector(".surpresa");
+    const historia = document.querySelector(".historia");
+
+    surpresa.style.display = "none";
+    historia.style.display = "flex";
+
+}

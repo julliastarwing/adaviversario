@@ -92,7 +92,7 @@ function criarDecoracoes() {
         fundo.appendChild(elemento);
 
     });
-
+alert("Foram criadas " + fundo.children.length + " decorações!");
 }
 
 

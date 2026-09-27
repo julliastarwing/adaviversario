@@ -8,35 +8,26 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>PRO DABI!!!! ♡</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
-<body>
+    <!--
+        Os corações serão criados
+        automaticamente pelo JavaScript.
+    -->
 
-    <!-- CORAÇÕES E ESTRELINHAS -->
-
-    <div class="decoracoes-fundo">
-        <span>♡</span>
-        <span>✦</span>
-        <span>♥</span>
-        <span>✧</span>
-        <span>♡</span>
-        <span>✦</span>
-        <span>♥</span>
-        <span>✧</span>
-        <span>♡</span>
-        <span>✦</span>
-        <span>♡</span>
-        <span>✧</span>
-    </div>
+    <div id="coracoes" aria-hidden="true"></div>
 
 
     <!-- TELA 1: INÍCIO -->
 
     <section class="tela inicio ativa">
+
         <div class="conteudo">
+
             <span class="decoracao">♡ ✧ ♡</span>
 
             <h1>oi dabizinho!</h1>
@@ -47,15 +38,18 @@
             </p>
 
             <button onclick="trocarTela(1)">
-             iniciar ♡
-             </button>
+                iniciar ♡
+            </button>
+
         </div>
+
     </section>
 
 
     <!-- TELA 2: KAMIJO -->
 
     <section class="tela surpresa">
+
         <div class="conteudo">
 
             <h2>feliz aniversário, meu amor ♡</h2>
@@ -71,6 +65,7 @@
                 e jogos antigos!
             </p>
 
+
             <div class="kamijo-flutuante">
 
                 <div class="balao">
@@ -79,27 +74,33 @@
                     aniversário dabi! ♡
                 </div>
 
-                <img src="imagens/kamijo1.jpg"
-                     alt="Kamijo">
+                <img
+                    src="imagens/kamijo1.jpg"
+                    alt="Kamijo"
+                >
 
             </div>
+
 
             <button onclick="trocarTela(2)">
                 continuar ♡
             </button>
 
         </div>
+
     </section>
 
 
     <!-- TELA 3: INTRODUÇÃO -->
 
     <section class="tela introducao">
+
         <div class="conteudo">
 
             <span class="decoracao">✧ ♡ ✧</span>
 
             <h2>hoje é sobre você.</h2>
+
 
             <div class="cartinha">
 
@@ -120,88 +121,134 @@
 
             </div>
 
+
             <button onclick="trocarTela(3)">
                 continuar ♡
             </button>
 
         </div>
+
     </section>
 
 
-    <!-- TELA 4: COISAS QUE EU AMO -->
+    <!-- TELA 4: CARTINHAS -->
 
     <section class="tela qualidades">
+
         <div class="conteudo">
 
             <h2>coisas que eu amo em você ♡</h2>
 
-            <p>
-                clica nas cartinhas!
-            </p>
+            <p>clica nas cartinhas!</p>
+
 
             <div class="grade-cartoes">
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">seu sorriso ♡</div>
-                    <div class="verso">
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        seu sorriso ♡
+                    </span>
+
+                    <span class="verso">
                         [Escreva por que você ama
                         o sorriso dele.]
-                    </div>
-                </div>
+                    </span>
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">seu jeitinho</div>
-                    <div class="verso">
+                </button>
+
+
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        seu jeitinho
+                    </span>
+
+                    <span class="verso">
                         [Escreva sobre a
                         personalidade dele.]
-                    </div>
-                </div>
+                    </span>
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">suas manias</div>
-                    <div class="verso">
+                </button>
+
+
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        suas manias
+                    </span>
+
+                    <span class="verso">
                         [Coloque uma mania
                         engraçada ou fofa.]
-                    </div>
-                </div>
+                    </span>
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">seu coração</div>
-                    <div class="verso">
-                        [Escreva sobre como
-                        ele trata as pessoas.]
-                    </div>
-                </div>
+                </button>
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">seu humor</div>
-                    <div class="verso">
+
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        seu coração
+                    </span>
+
+                    <span class="verso">
+                        [Escreva sobre como ele
+                        trata as pessoas.]
+                    </span>
+
+                </button>
+
+
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        seu humor
+                    </span>
+
+                    <span class="verso">
                         [Uma piada interna
                         ou algo que ele faz.]
-                    </div>
-                </div>
+                    </span>
 
-                <div class="cartao" onclick="virarCartao(this)">
-                    <div class="frente">ser você ♡</div>
-                    <div class="verso">
+                </button>
+
+
+                <button class="cartao"
+                        onclick="virarCartao(this)">
+
+                    <span class="frente">
+                        ser você ♡
+                    </span>
+
+                    <span class="verso">
                         [Uma mensagem especial
                         sobre quem ele é.]
-                    </div>
-                </div>
+                    </span>
+
+                </button>
 
             </div>
+
 
             <button onclick="trocarTela(4)">
                 continuar ♡
             </button>
 
         </div>
+
     </section>
 
 
     <!-- TELA 5: COISAS QUE LEMBRAM ELE -->
 
     <section class="tela favoritos">
+
         <div class="conteudo">
 
             <h2>coisas que têm a sua cara</h2>
@@ -210,6 +257,7 @@
                 pequenas coisas que sempre
                 me fazem lembrar de você ♡
             </p>
+
 
             <div class="grade-favoritos">
 
@@ -239,31 +287,40 @@
 
             </div>
 
+
             <button onclick="trocarTela(5)">
                 continuar ♡
             </button>
 
         </div>
+
     </section>
 
 
     <!-- TELA 6: PELOS MEUS OLHOS -->
 
     <section class="tela meus-olhos">
+
         <div class="conteudo">
 
             <span class="decoracao">♡</span>
 
             <h2>você pelos meus olhos</h2>
 
+
             <div class="moldura-foto">
+
                 <div class="espaco-foto">
                     coloque uma foto dele aqui ♡
                 </div>
+
                 <p>meu menino favorito</p>
+
             </div>
 
+
             <div class="texto-especial">
+
                 <p>
                     [Escreva aqui como você
                     enxerga ele.]
@@ -273,24 +330,29 @@
                     [Fale sobre o que você admira
                     nele e o que o torna especial.]
                 </p>
+
             </div>
+
 
             <button onclick="trocarTela(6)">
                 continuar ♡
             </button>
 
         </div>
+
     </section>
 
 
     <!-- TELA 7: CARTA FINAL -->
 
     <section class="tela final">
+
         <div class="conteudo">
 
             <span class="decoracao">✧ ♡ ✧</span>
 
             <h2>feliz aniversário, meu amor.</h2>
+
 
             <div class="carta-final">
 
@@ -318,17 +380,23 @@
 
             </div>
 
-            <h2 class="eu-te-amo">eu te amo ♡</h2>
+
+            <h2 class="eu-te-amo">
+                eu te amo ♡
+            </h2>
+
 
             <button onclick="trocarTela(0)">
                 ver tudo de novo ♡
             </button>
 
         </div>
+
     </section>
 
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 
 </body>
+
 </html>

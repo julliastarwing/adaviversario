@@ -1,5 +1,7 @@
 
+/* ================================= */
 /* CONFIGURAÇÕES GERAIS */
+/* ================================= */
 
 * {
     margin: 0;
@@ -7,20 +9,39 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
-    background: #1a0d14;
+    background-color: #1a0d14;
     color: white;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
+
+
+/* ================================= */
+/* SISTEMA DE TELAS */
+/* ================================= */
 
 .tela {
     display: none;
+
+    position: relative;
+    z-index: 1;
+
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
+
     padding: 55px 20px;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 }
 
@@ -32,10 +53,16 @@ body {
 .conteudo {
     width: 100%;
     max-width: 750px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+/* ================================= */
+/* TEXTOS */
+/* ================================= */
 
 h1 {
     font-size: 45px;
@@ -61,74 +88,134 @@ p {
     margin-bottom: 25px;
 }
 
+
+/* ================================= */
+/* BOTÕES */
+/* ================================= */
+
 button {
-    background: #ff6196;
+    background-color: #ff6196;
     color: white;
+
     border: none;
     border-radius: 30px;
+
     padding: 15px 35px;
     margin-top: 25px;
+
     font-size: 17px;
+    font-family: inherit;
+
     cursor: pointer;
-    transition: 0.3s;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 
 button:hover {
-    background: #ff8bb3;
+    background-color: #ff8bb3;
     transform: scale(1.08);
 }
 
 
-/* TELA INICIAL */
+/* ================================= */
+/* TELA 1 - INÍCIO */
+/* ================================= */
 
 .inicio {
     background:
-        radial-gradient(circle, #452039, #1a0d14 70%);
+        radial-gradient(
+            circle,
+            #452039,
+            #1a0d14 70%
+        );
 }
 
 
-/* KAMIJO */
+/* ================================= */
+/* TELA 2 - KAMIJO */
+/* ================================= */
+
+.surpresa h2 {
+    margin-bottom: 20px;
+}
+
+.surpresa p {
+    max-width: 650px;
+}
 
 .kamijo-flutuante {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin: 45px 0 15px;
-    animation: flutuarKamijo 2.5s ease-in-out infinite;
+
+    animation:
+        flutuarKamijo 2.5s ease-in-out infinite;
+
+    will-change: transform;
 }
+
+
+/* BALÃO DE FALA */
 
 .balao {
     position: relative;
-    background: white;
+
+    background-color: white;
     color: #1a0d14;
+
     max-width: 300px;
+
     padding: 18px;
-    border-radius: 22px;
     margin-bottom: 22px;
+
+    border-radius: 22px;
+
     font-size: 16px;
     line-height: 1.5;
+
+    box-shadow: 0 5px 20px #0005;
 }
+
+
+/* PONTINHA DO BALÃO */
 
 .balao::after {
     content: "";
+
     position: absolute;
+
     bottom: -12px;
     left: 50%;
+
     transform: translateX(-50%);
+
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 14px solid white;
 }
 
+
+/* FOTO DO KAMIJO */
+
 .kamijo-flutuante img {
     width: 180px;
     height: 180px;
+
     object-fit: cover;
     border-radius: 50%;
+
     box-shadow: 0 8px 25px #0008;
 }
 
+
+/* ANIMAÇÃO DO KAMIJO */
+
 @keyframes flutuarKamijo {
+
     0%, 100% {
         transform: translateY(0);
     }
@@ -136,50 +223,77 @@ button:hover {
     50% {
         transform: translateY(-30px);
     }
+
 }
 
 
-/* INTRODUÇÃO */
+/* ================================= */
+/* TELA 3 - INTRODUÇÃO */
+/* ================================= */
 
 .introducao {
     background:
-        radial-gradient(circle, #4a2540, #1a0d14 75%);
+        radial-gradient(
+            circle,
+            #4a2540,
+            #1a0d14 75%
+        );
 }
 
 .cartinha {
-    background: #351d2d;
+    background-color: #351d2d;
+
     border: 1px solid #a35c80;
     border-radius: 20px;
+
     padding: 35px 25px;
+
     width: 100%;
     max-width: 550px;
+
     margin: 20px 0;
+
     box-shadow: 0 10px 35px #0004;
 }
 
 
-/* CARTÕES CLICÁVEIS */
+/* ================================= */
+/* TELA 4 - CARTINHAS CLICÁVEIS */
+/* ================================= */
 
 .grade-cartoes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 15px;
+
     width: 100%;
     max-width: 600px;
+
     margin-top: 20px;
 }
 
 .cartao {
     min-height: 150px;
-    background: #48243c;
+
+    background-color: #48243c;
+
     border: 1px solid #a35c80;
     border-radius: 18px;
+
     padding: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     cursor: pointer;
-    transition: 0.4s;
+
+    transition:
+        background-color 0.4s,
+        transform 0.4s;
 }
 
 .cartao:hover {
@@ -193,12 +307,13 @@ button:hover {
 
 .verso {
     display: none;
+
     font-size: 16px;
     line-height: 1.5;
 }
 
 .cartao.virado {
-    background: #803f63;
+    background-color: #803f63;
 }
 
 .cartao.virado .frente {
@@ -210,20 +325,28 @@ button:hover {
 }
 
 
-/* COISAS QUE LEMBRAM ELE */
+/* ================================= */
+/* TELA 5 - COISAS QUE LEMBRAM ELE */
+/* ================================= */
 
 .grade-favoritos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 18px;
+
     width: 100%;
     margin-top: 20px;
 }
 
 .item-favorito {
-    background: #351d2d;
+    background-color: #351d2d;
+
     border: 1px solid #8d5070;
     border-radius: 20px;
+
     padding: 30px 15px;
 }
 
@@ -242,30 +365,43 @@ button:hover {
 }
 
 
-/* VOCÊ PELOS MEUS OLHOS */
+/* ================================= */
+/* TELA 6 - VOCÊ PELOS MEUS OLHOS */
+/* ================================= */
 
 .moldura-foto {
-    background: #fff0f5;
+    background-color: #fff0f5;
+
     padding: 15px 15px 5px;
+
     width: 260px;
+    max-width: 100%;
+
     margin: 20px 0 35px;
+
     transform: rotate(-3deg);
+
     box-shadow: 0 10px 30px #0006;
 }
 
 .espaco-foto {
     height: 250px;
-    background: #caa0b5;
+
+    background-color: #caa0b5;
     color: #4b2539;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 20px;
 }
 
 .moldura-foto p {
     color: #4b2539;
+
     margin: 12px 0;
+
     font-size: 17px;
 }
 
@@ -274,22 +410,33 @@ button:hover {
 }
 
 
-/* CARTA FINAL */
+/* ================================= */
+/* TELA 7 - CARTA FINAL */
+/* ================================= */
 
 .final {
     background:
-        radial-gradient(circle, #522741, #1a0d14 75%);
+        radial-gradient(
+            circle,
+            #522741,
+            #1a0d14 75%
+        );
 }
 
 .carta-final {
     width: 100%;
     max-width: 580px;
-    background: #fff0f5;
+
+    background-color: #fff0f5;
     color: #45253b;
+
     border-radius: 8px;
+
     padding: 40px 30px;
     margin: 20px 0;
+
     text-align: left;
+
     box-shadow: 0 10px 40px #0006;
 }
 
@@ -305,13 +452,175 @@ button:hover {
 
 .eu-te-amo {
     margin-top: 25px;
-    animation: pulsar 2s infinite;
+
+    animation: pulsar 2s ease-in-out infinite;
 }
 
 
-/* ANIMAÇÕES */
+/* ================================= */
+/* CORAÇÕES E ESTRELINHAS FLUTUANTES */
+/* ================================= */
+
+/* CAMADA QUE COBRE A TELA */
+
+.decoracoes-fundo {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* CADA CORAÇÃO OU ESTRELINHA */
+
+.decoracoes-fundo span {
+    position: absolute;
+    display: block;
+
+    bottom: -60px;
+
+    font-size: 25px;
+    line-height: 1;
+
+    color: #ff9fc5;
+
+    opacity: 0;
+
+    animation:
+        subirCoracao 12s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* POSIÇÕES E VELOCIDADES */
+
+.decoracoes-fundo span:nth-child(1) {
+    left: 5%;
+    animation-delay: -2s;
+    animation-duration: 12s;
+}
+
+.decoracoes-fundo span:nth-child(2) {
+    left: 15%;
+    animation-delay: -5s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(3) {
+    left: 25%;
+    animation-delay: -8s;
+    animation-duration: 11s;
+}
+
+.decoracoes-fundo span:nth-child(4) {
+    left: 35%;
+    animation-delay: -3s;
+    animation-duration: 14s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(5) {
+    left: 45%;
+    animation-delay: -10s;
+    animation-duration: 13s;
+}
+
+.decoracoes-fundo span:nth-child(6) {
+    left: 55%;
+    animation-delay: -6s;
+    animation-duration: 16s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(7) {
+    left: 65%;
+    animation-delay: -1s;
+    animation-duration: 12s;
+}
+
+.decoracoes-fundo span:nth-child(8) {
+    left: 75%;
+    animation-delay: -9s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(9) {
+    left: 85%;
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.decoracoes-fundo span:nth-child(10) {
+    left: 95%;
+    animation-delay: -7s;
+    animation-duration: 14s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(11) {
+    left: 30%;
+    animation-delay: -11s;
+    animation-duration: 17s;
+}
+
+.decoracoes-fundo span:nth-child(12) {
+    left: 70%;
+    animation-delay: -5s;
+    animation-duration: 11s;
+    color: #ffe5b4;
+}
+
+
+/* ANIMAÇÃO DOS CORAÇÕES */
+
+@keyframes subirCoracao {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.65;
+    }
+
+    85% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ================================= */
+/* OUTRAS ANIMAÇÕES */
+/* ================================= */
 
 @keyframes aparecer {
+
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -321,9 +630,11 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 @keyframes pulsar {
+
     0%, 100% {
         transform: scale(1);
     }
@@ -331,12 +642,19 @@ button:hover {
     50% {
         transform: scale(1.08);
     }
+
 }
 
 
-/* CELULAR */
+/* ================================= */
+/* VERSÃO PARA CELULAR */
+/* ================================= */
 
 @media (max-width: 600px) {
+
+    .tela {
+        padding: 45px 16px;
+    }
 
     h1 {
         font-size: 35px;
@@ -352,7 +670,9 @@ button:hover {
 
     .grade-cartoes,
     .grade-favoritos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 10px;
     }
 
@@ -377,267 +697,33 @@ button:hover {
         width: 150px;
         height: 150px;
     }
-}
 
-/* ============================= */
-/* CORAÇÕES E ESTRELINHAS */
-/* ============================= */
-
-.decoracoes-fundo {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Mantém o conteúdo acima das decorações */
-
-.tela.ativa {
-    position: relative;
-    z-index: 1;
-}
-
-/* Configuração dos corações */
-
-.decoracoes-fundo span {
-    position: absolute;
-    bottom: -60px;
-
-    color: #ff9fc5;
-    font-size: 25px;
-    opacity: 0;
-
-    animation: subirCoracao 12s linear infinite;
-}
-
-/* Posições e velocidades diferentes */
-
-.decoracoes-fundo span:nth-child(1) {
-    left: 5%;
-    animation-delay: 0s;
-    animation-duration: 12s;
-}
-
-.decoracoes-fundo span:nth-child(2) {
-    left: 15%;
-    animation-delay: -4s;
-    animation-duration: 15s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(3) {
-    left: 25%;
-    animation-delay: -8s;
-    animation-duration: 11s;
-}
-
-.decoracoes-fundo span:nth-child(4) {
-    left: 35%;
-    animation-delay: -2s;
-    animation-duration: 14s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(5) {
-    left: 45%;
-    animation-delay: -6s;
-    animation-duration: 13s;
-}
-
-.decoracoes-fundo span:nth-child(6) {
-    left: 55%;
-    animation-delay: -10s;
-    animation-duration: 16s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(7) {
-    left: 65%;
-    animation-delay: -3s;
-    animation-duration: 12s;
-}
-
-.decoracoes-fundo span:nth-child(8) {
-    left: 75%;
-    animation-delay: -7s;
-    animation-duration: 15s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(9) {
-    left: 85%;
-    animation-delay: -11s;
-    animation-duration: 13s;
-}
-
-.decoracoes-fundo span:nth-child(10) {
-    left: 95%;
-    animation-delay: -5s;
-    animation-duration: 14s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(11) {
-    left: 30%;
-    animation-delay: -9s;
-    animation-duration: 17s;
-}
-
-.decoracoes-fundo span:nth-child(12) {
-    left: 70%;
-    animation-delay: -1s;
-    animation-duration: 11s;
-    color: #ffe5b4;
-}
-
-/* ANIMAÇÃO DE SUBIDA */
-
-@keyframes subirCoracao {
-
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
+    .balao {
+        max-width: 250px;
+        font-size: 14px;
     }
 
-    10% {
-        opacity: 0.65;
-    }
-
-    85% {
-        opacity: 0.65;
-    }
-
-    100% {
-        transform: translateY(-120vh) rotate(360deg);
-        opacity: 0;
+    .decoracoes-fundo span {
+        font-size: 19px;
     }
 
 }
 
-/* Acessibilidade: reduz animações quando solicitado */
+
+/* ================================= */
+/* ACESSIBILIDADE */
+/* ================================= */
 
 @media (prefers-reduced-motion: reduce) {
-    .decoracoes-fundo span {
+
+    .decoracoes-fundo span,
+    .kamijo-flutuante,
+    .eu-te-amo {
         animation: none;
     }
-}
 
-/* CORREÇÃO DOS CORAÇÕES E ESTRELINHAS */
-
-.decoracoes-fundo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.decoracoes-fundo span {
-    position: absolute;
-    display: block;
-
-    bottom: -60px;
-    font-size: 25px;
-    color: #ff9fc5;
-
-    opacity: 0;
-
-    animation: subirCoracao 12s linear infinite;
-}
-
-.decoracoes-fundo span:nth-child(1) {
-    left: 5%;
-    animation-delay: -2s;
-}
-
-.decoracoes-fundo span:nth-child(2) {
-    left: 15%;
-    animation-delay: -5s;
-}
-
-.decoracoes-fundo span:nth-child(3) {
-    left: 25%;
-    animation-delay: -8s;
-}
-
-.decoracoes-fundo span:nth-child(4) {
-    left: 35%;
-    animation-delay: -3s;
-}
-
-.decoracoes-fundo span:nth-child(5) {
-    left: 45%;
-    animation-delay: -10s;
-}
-
-.decoracoes-fundo span:nth-child(6) {
-    left: 55%;
-    animation-delay: -6s;
-}
-
-.decoracoes-fundo span:nth-child(7) {
-    left: 65%;
-    animation-delay: -1s;
-}
-
-.decoracoes-fundo span:nth-child(8) {
-    left: 75%;
-    animation-delay: -9s;
-}
-
-.decoracoes-fundo span:nth-child(9) {
-    left: 85%;
-    animation-delay: -4s;
-}
-
-.decoracoes-fundo span:nth-child(10) {
-    left: 95%;
-    animation-delay: -7s;
-}
-
-.decoracoes-fundo span:nth-child(11) {
-    left: 30%;
-    animation-delay: -11s;
-}
-
-.decoracoes-fundo span:nth-child(12) {
-    left: 70%;
-    animation-delay: -5s;
-}
-
-/* ANIMAÇÃO */
-
-@keyframes subirCoracao {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
+    .tela.ativa {
+        animation: none;
     }
 
-    10% {
-        opacity: 0.7;
-    }
-
-    85% {
-        opacity: 0.7;
-    }
-
-    100% {
-        transform: translateY(-120vh);
-        opacity: 0;
-    }
-}
-
-/* DEIXA AS TELAS ACIMA DOS CORAÇÕES */
-
-.tela.ativa {
-    position: relative;
-    z-index: 1;
 }

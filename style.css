@@ -526,3 +526,118 @@ button:hover {
     }
 }
 
+/* CORREÇÃO DOS CORAÇÕES E ESTRELINHAS */
+
+.decoracoes-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decoracoes-fundo span {
+    position: absolute;
+    display: block;
+
+    bottom: -60px;
+    font-size: 25px;
+    color: #ff9fc5;
+
+    opacity: 0;
+
+    animation: subirCoracao 12s linear infinite;
+}
+
+.decoracoes-fundo span:nth-child(1) {
+    left: 5%;
+    animation-delay: -2s;
+}
+
+.decoracoes-fundo span:nth-child(2) {
+    left: 15%;
+    animation-delay: -5s;
+}
+
+.decoracoes-fundo span:nth-child(3) {
+    left: 25%;
+    animation-delay: -8s;
+}
+
+.decoracoes-fundo span:nth-child(4) {
+    left: 35%;
+    animation-delay: -3s;
+}
+
+.decoracoes-fundo span:nth-child(5) {
+    left: 45%;
+    animation-delay: -10s;
+}
+
+.decoracoes-fundo span:nth-child(6) {
+    left: 55%;
+    animation-delay: -6s;
+}
+
+.decoracoes-fundo span:nth-child(7) {
+    left: 65%;
+    animation-delay: -1s;
+}
+
+.decoracoes-fundo span:nth-child(8) {
+    left: 75%;
+    animation-delay: -9s;
+}
+
+.decoracoes-fundo span:nth-child(9) {
+    left: 85%;
+    animation-delay: -4s;
+}
+
+.decoracoes-fundo span:nth-child(10) {
+    left: 95%;
+    animation-delay: -7s;
+}
+
+.decoracoes-fundo span:nth-child(11) {
+    left: 30%;
+    animation-delay: -11s;
+}
+
+.decoracoes-fundo span:nth-child(12) {
+    left: 70%;
+    animation-delay: -5s;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes subirCoracao {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* DEIXA AS TELAS ACIMA DOS CORAÇÕES */
+
+.tela.ativa {
+    position: relative;
+    z-index: 1;
+}

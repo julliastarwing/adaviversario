@@ -1,5 +1,9 @@
 function iniciarSurpresa() {
-    document.querySelector(".inicio").style.setProperty("display", "none", "important");
 
-    document.querySelector(".surpresa").style.setProperty("display", "flex", "important");
+    const inicio = document.querySelector(".inicio");
+    const surpresa = document.querySelector(".surpresa");
+
+    inicio.style.display = "none";
+    surpresa.style.display = "flex";
+
 }

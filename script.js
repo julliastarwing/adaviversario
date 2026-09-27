@@ -1,21 +1,20 @@
-function trocarTela(telaAtual, proximaTela) {
 
-    document.querySelector(telaAtual).classList.remove("ativa");
+const telas = document.querySelectorAll(".tela");
 
-    document.querySelector(proximaTela).classList.add("ativa");
+function trocarTela(numero) {
+
+    telas.forEach(tela => {
+        tela.classList.remove("ativa");
+    });
+
+    telas[numero].classList.add("ativa");
+
+    window.scrollTo(0, 0);
 
 }
 
+function virarCartao(cartao) {
 
-function iniciarSurpresa() {
-
-    trocarTela(".inicio", ".surpresa");
-
-}
-
-
-function mostrarHistoria() {
-
-    trocarTela(".surpresa", ".historia");
+    cartao.classList.toggle("virado");
 
 }

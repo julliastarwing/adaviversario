@@ -378,3 +378,151 @@ button:hover {
         height: 150px;
     }
 }
+
+/* ============================= */
+/* CORAÇÕES E ESTRELINHAS */
+/* ============================= */
+
+.decoracoes-fundo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Mantém o conteúdo acima das decorações */
+
+.tela.ativa {
+    position: relative;
+    z-index: 1;
+}
+
+/* Configuração dos corações */
+
+.decoracoes-fundo span {
+    position: absolute;
+    bottom: -60px;
+
+    color: #ff9fc5;
+    font-size: 25px;
+    opacity: 0;
+
+    animation: subirCoracao 12s linear infinite;
+}
+
+/* Posições e velocidades diferentes */
+
+.decoracoes-fundo span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
+
+.decoracoes-fundo span:nth-child(2) {
+    left: 15%;
+    animation-delay: -4s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(3) {
+    left: 25%;
+    animation-delay: -8s;
+    animation-duration: 11s;
+}
+
+.decoracoes-fundo span:nth-child(4) {
+    left: 35%;
+    animation-delay: -2s;
+    animation-duration: 14s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(5) {
+    left: 45%;
+    animation-delay: -6s;
+    animation-duration: 13s;
+}
+
+.decoracoes-fundo span:nth-child(6) {
+    left: 55%;
+    animation-delay: -10s;
+    animation-duration: 16s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(7) {
+    left: 65%;
+    animation-delay: -3s;
+    animation-duration: 12s;
+}
+
+.decoracoes-fundo span:nth-child(8) {
+    left: 75%;
+    animation-delay: -7s;
+    animation-duration: 15s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(9) {
+    left: 85%;
+    animation-delay: -11s;
+    animation-duration: 13s;
+}
+
+.decoracoes-fundo span:nth-child(10) {
+    left: 95%;
+    animation-delay: -5s;
+    animation-duration: 14s;
+    color: #ffe5b4;
+}
+
+.decoracoes-fundo span:nth-child(11) {
+    left: 30%;
+    animation-delay: -9s;
+    animation-duration: 17s;
+}
+
+.decoracoes-fundo span:nth-child(12) {
+    left: 70%;
+    animation-delay: -1s;
+    animation-duration: 11s;
+    color: #ffe5b4;
+}
+
+/* ANIMAÇÃO DE SUBIDA */
+
+@keyframes subirCoracao {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.65;
+    }
+
+    85% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+/* Acessibilidade: reduz animações quando solicitado */
+
+@media (prefers-reduced-motion: reduce) {
+    .decoracoes-fundo span {
+        animation: none;
+    }
+}
+

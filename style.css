@@ -1,6 +1,5 @@
-/* ============================= */
-/* GERAL */
-/* ============================= */
+
+/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -9,260 +8,373 @@
 }
 
 body {
-    background-color: #1a0d14;
+    background: #1a0d14;
     color: white;
-
     font-family: Arial, sans-serif;
-
-    min-height: 100vh;
 }
-
-
-/* ============================= */
-/* SISTEMA DE TELAS */
-/* ============================= */
 
 .tela {
     display: none;
-
     width: 100%;
     min-height: 100vh;
-
+    padding: 55px 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    padding: 40px 20px;
 }
-
-
-/* SOMENTE A TELA ATIVA APARECE */
 
 .tela.ativa {
     display: flex;
+    animation: aparecer 0.7s ease;
 }
 
+.conteudo {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* ============================= */
-/* TELA INICIAL */
-/* ============================= */
-
-.inicio h1 {
+h1 {
     font-size: 45px;
+    color: #ffc4db;
+    margin-bottom: 25px;
+}
 
+h2 {
+    font-size: 34px;
+    color: #ffc4db;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
-.inicio p {
-    font-size: 20px;
-    line-height: 1.5;
-
-    margin-bottom: 30px;
+.decoracao {
+    color: #ff91bd;
+    font-size: 35px;
+    margin-bottom: 25px;
 }
 
-
-/* ============================= */
-/* BOTÕES */
-/* ============================= */
-
 button {
-    background-color: #ff6196;
+    background: #ff6196;
     color: white;
-
     border: none;
-    border-radius: 20px;
-
+    border-radius: 30px;
     padding: 15px 35px;
-
-    font-size: 18px;
-
+    margin-top: 25px;
+    font-size: 17px;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.1);
-
-    background-color: #ff8bb3;
+    background: #ff8bb3;
+    transform: scale(1.08);
 }
 
 
-/* ============================= */
-/* TELA DO KAMIJO */
-/* ============================= */
+/* TELA INICIAL */
 
-.surpresa h2 {
-    font-size: 35px;
-
-    margin-bottom: 20px;
-}
-
-.surpresa > p {
-    font-size: 18px;
-    line-height: 1.5;
-
-    max-width: 650px;
-
-    margin-bottom: 15px;
+.inicio {
+    background:
+        radial-gradient(circle, #452039, #1a0d14 70%);
 }
 
 
-/* ============================= */
-/* KAMIJO FLUTUANTE */
-/* ============================= */
+/* KAMIJO */
 
 .kamijo-flutuante {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
-    margin-top: 40px;
-
+    margin: 45px 0 15px;
     animation: flutuarKamijo 2.5s ease-in-out infinite;
-
-    will-change: transform;
 }
 
+.balao {
+    position: relative;
+    background: white;
+    color: #1a0d14;
+    max-width: 300px;
+    padding: 18px;
+    border-radius: 22px;
+    margin-bottom: 22px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.balao::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid white;
+}
+
+.kamijo-flutuante img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px #0008;
+}
 
 @keyframes flutuarKamijo {
-
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-30px);
     }
+}
 
-    100% {
-        transform: translateY(0);
+
+/* INTRODUÇÃO */
+
+.introducao {
+    background:
+        radial-gradient(circle, #4a2540, #1a0d14 75%);
+}
+
+.cartinha {
+    background: #351d2d;
+    border: 1px solid #a35c80;
+    border-radius: 20px;
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 550px;
+    margin: 20px 0;
+    box-shadow: 0 10px 35px #0004;
+}
+
+
+/* CARTÕES CLICÁVEIS */
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.cartao {
+    min-height: 150px;
+    background: #48243c;
+    border: 1px solid #a35c80;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+}
+
+.frente {
+    font-size: 19px;
+    color: #ffd1e4;
+}
+
+.verso {
+    display: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cartao.virado {
+    background: #803f63;
+}
+
+.cartao.virado .frente {
+    display: none;
+}
+
+.cartao.virado .verso {
+    display: block;
+}
+
+
+/* COISAS QUE LEMBRAM ELE */
+
+.grade-favoritos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.item-favorito {
+    background: #351d2d;
+    border: 1px solid #8d5070;
+    border-radius: 20px;
+    padding: 30px 15px;
+}
+
+.item-favorito span {
+    font-size: 40px;
+}
+
+.item-favorito h3 {
+    color: #ffc4db;
+    margin: 15px 0;
+}
+
+.item-favorito p {
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* VOCÊ PELOS MEUS OLHOS */
+
+.moldura-foto {
+    background: #fff0f5;
+    padding: 15px 15px 5px;
+    width: 260px;
+    margin: 20px 0 35px;
+    transform: rotate(-3deg);
+    box-shadow: 0 10px 30px #0006;
+}
+
+.espaco-foto {
+    height: 250px;
+    background: #caa0b5;
+    color: #4b2539;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.moldura-foto p {
+    color: #4b2539;
+    margin: 12px 0;
+    font-size: 17px;
+}
+
+.texto-especial {
+    max-width: 550px;
+}
+
+
+/* CARTA FINAL */
+
+.final {
+    background:
+        radial-gradient(circle, #522741, #1a0d14 75%);
+}
+
+.carta-final {
+    width: 100%;
+    max-width: 580px;
+    background: #fff0f5;
+    color: #45253b;
+    border-radius: 8px;
+    padding: 40px 30px;
+    margin: 20px 0;
+    text-align: left;
+    box-shadow: 0 10px 40px #0006;
+}
+
+.carta-final p {
+    font-size: 17px;
+}
+
+.assinatura {
+    text-align: right;
+    margin-top: 35px;
+    font-style: italic;
+}
+
+.eu-te-amo {
+    margin-top: 25px;
+    animation: pulsar 2s infinite;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
     }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
 }
 
 
-/* ============================= */
-/* BALÃO */
-/* ============================= */
-
-.balao {
-    position: relative;
-
-    max-width: 300px;
-
-    background-color: white;
-    color: #1a0d14;
-
-    padding: 15px 20px;
-
-    margin-bottom: 20px;
-
-    border-radius: 20px;
-
-    font-size: 16px;
-    line-height: 1.4;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-}
-
-
-.balao::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: -12px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 14px solid white;
-}
-
-
-/* ============================= */
-/* FOTO DO KAMIJO */
-/* ============================= */
-
-.kamijo-flutuante img {
-    width: 180px;
-    height: 180px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-}
-
-
-/* ============================= */
-/* BOTÃO CONTINUAR */
-/* ============================= */
-
-.botao-continuar {
-    margin-top: 25px;
-}
-
-
-/* ============================= */
-/* TELA 3 */
-/* ============================= */
-
-.historia h2 {
-    font-size: 35px;
-
-    margin-bottom: 20px;
-}
-
-.historia p {
-    font-size: 18px;
-
-    margin-bottom: 35px;
-}
-
-.historia h3 {
-    font-size: 25px;
-
-    color: #ff8bb3;
-}
-
-
-/* ============================= */
 /* CELULAR */
-/* ============================= */
 
 @media (max-width: 600px) {
 
-    .inicio h1 {
+    h1 {
         font-size: 35px;
     }
 
-    .surpresa h2,
-    .historia h2 {
+    h2 {
         font-size: 28px;
     }
 
-    .surpresa > p,
-    .historia p {
+    p {
         font-size: 16px;
+    }
+
+    .grade-cartoes,
+    .grade-favoritos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .cartao {
+        padding: 12px;
+        min-height: 130px;
+    }
+
+    .frente {
+        font-size: 16px;
+    }
+
+    .verso {
+        font-size: 14px;
+    }
+
+    .carta-final {
+        padding: 25px 20px;
     }
 
     .kamijo-flutuante img {
         width: 150px;
         height: 150px;
     }
-
-    .balao {
-        max-width: 250px;
-
-        font-size: 14px;
-    }
-
 }

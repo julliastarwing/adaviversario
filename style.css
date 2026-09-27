@@ -693,3 +693,20 @@ button:hover {
     }
 
 }
+/* MOSTRAR OS CORAÇÕES TAMBÉM NA TELA INICIAL */
+
+.inicio {
+    background: transparent;
+}
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle,
+        #452039,
+        #1a0d14 70%
+    );
+    z-index: -1;
+}

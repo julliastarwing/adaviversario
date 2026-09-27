@@ -83,3 +83,29 @@ button:hover {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+/* CORREÇÃO DA SEGUNDA TELA */
+
+.surpresa {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.surpresa h2 {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.surpresa p {
+    display: block;
+    width: 100%;
+    margin: 0 0 25px 0;
+}

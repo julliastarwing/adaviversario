@@ -14,9 +14,11 @@ html {
 }
 
 body {
-    background-color: #1a0d14;
+    background: #1a0d14;
     color: white;
+
     font-family: Arial, sans-serif;
+
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -67,24 +69,28 @@ body {
 h1 {
     font-size: 45px;
     color: #ffc4db;
+
     margin-bottom: 25px;
 }
 
 h2 {
     font-size: 34px;
     color: #ffc4db;
+
     margin-bottom: 25px;
 }
 
 p {
     font-size: 18px;
     line-height: 1.7;
+
     margin-bottom: 20px;
 }
 
 .decoracao {
     color: #ff91bd;
     font-size: 35px;
+
     margin-bottom: 25px;
 }
 
@@ -94,7 +100,7 @@ p {
 /* ================================= */
 
 button {
-    background-color: #ff6196;
+    background: #ff6196;
     color: white;
 
     border: none;
@@ -109,12 +115,12 @@ button {
     cursor: pointer;
 
     transition:
-        background-color 0.3s,
+        background 0.3s,
         transform 0.3s;
 }
 
 button:hover {
-    background-color: #ff8bb3;
+    background: #ff8bb3;
     transform: scale(1.08);
 }
 
@@ -137,10 +143,6 @@ button:hover {
 /* TELA 2 - KAMIJO */
 /* ================================= */
 
-.surpresa h2 {
-    margin-bottom: 20px;
-}
-
 .surpresa p {
     max-width: 650px;
 }
@@ -159,12 +161,12 @@ button:hover {
 }
 
 
-/* BALÃO DE FALA */
+/* BALÃO */
 
 .balao {
     position: relative;
 
-    background-color: white;
+    background: white;
     color: #1a0d14;
 
     max-width: 300px;
@@ -212,21 +214,6 @@ button:hover {
 }
 
 
-/* ANIMAÇÃO DO KAMIJO */
-
-@keyframes flutuarKamijo {
-
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
-
-}
-
-
 /* ================================= */
 /* TELA 3 - INTRODUÇÃO */
 /* ================================= */
@@ -241,7 +228,7 @@ button:hover {
 }
 
 .cartinha {
-    background-color: #351d2d;
+    background: #351d2d;
 
     border: 1px solid #a35c80;
     border-radius: 20px;
@@ -258,7 +245,7 @@ button:hover {
 
 
 /* ================================= */
-/* TELA 4 - CARTINHAS CLICÁVEIS */
+/* TELA 4 - CARTINHAS */
 /* ================================= */
 
 .grade-cartoes {
@@ -278,12 +265,13 @@ button:hover {
 .cartao {
     min-height: 150px;
 
-    background-color: #48243c;
+    background: #48243c;
 
     border: 1px solid #a35c80;
     border-radius: 18px;
 
     padding: 20px;
+    margin-top: 0;
 
     display: flex;
     justify-content: center;
@@ -292,7 +280,7 @@ button:hover {
     cursor: pointer;
 
     transition:
-        background-color 0.4s,
+        background 0.4s,
         transform 0.4s;
 }
 
@@ -313,7 +301,7 @@ button:hover {
 }
 
 .cartao.virado {
-    background-color: #803f63;
+    background: #803f63;
 }
 
 .cartao.virado .frente {
@@ -326,7 +314,7 @@ button:hover {
 
 
 /* ================================= */
-/* TELA 5 - COISAS QUE LEMBRAM ELE */
+/* TELA 5 - FAVORITOS */
 /* ================================= */
 
 .grade-favoritos {
@@ -342,7 +330,7 @@ button:hover {
 }
 
 .item-favorito {
-    background-color: #351d2d;
+    background: #351d2d;
 
     border: 1px solid #8d5070;
     border-radius: 20px;
@@ -366,11 +354,11 @@ button:hover {
 
 
 /* ================================= */
-/* TELA 6 - VOCÊ PELOS MEUS OLHOS */
+/* TELA 6 - FOTO */
 /* ================================= */
 
 .moldura-foto {
-    background-color: #fff0f5;
+    background: #fff0f5;
 
     padding: 15px 15px 5px;
 
@@ -387,7 +375,7 @@ button:hover {
 .espaco-foto {
     height: 250px;
 
-    background-color: #caa0b5;
+    background: #caa0b5;
     color: #4b2539;
 
     display: flex;
@@ -427,7 +415,7 @@ button:hover {
     width: 100%;
     max-width: 580px;
 
-    background-color: #fff0f5;
+    background: #fff0f5;
     color: #45253b;
 
     border-radius: 8px;
@@ -452,18 +440,15 @@ button:hover {
 
 .eu-te-amo {
     margin-top: 25px;
-
-    animation: pulsar 2s ease-in-out infinite;
+    animation: pulsar 2s infinite;
 }
 
 
 /* ================================= */
-/* CORAÇÕES E ESTRELINHAS FLUTUANTES */
+/* CORAÇÕES E ESTRELINHAS */
 /* ================================= */
 
-/* CAMADA QUE COBRE A TELA */
-
-.decoracoes-fundo {
+#coracoes {
     position: fixed;
 
     top: 0;
@@ -480,111 +465,28 @@ button:hover {
     z-index: 2;
 }
 
-
-/* CADA CORAÇÃO OU ESTRELINHA */
-
-.decoracoes-fundo span {
+.coracao-flutuante {
     position: absolute;
+
     display: block;
 
     bottom: -60px;
 
-    font-size: 25px;
     line-height: 1;
-
-    color: #ff9fc5;
 
     opacity: 0;
 
-    animation:
-        subirCoracao 12s linear infinite;
+    animation-name: subirCoracao;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 
     will-change: transform;
 }
 
 
-/* POSIÇÕES E VELOCIDADES */
-
-.decoracoes-fundo span:nth-child(1) {
-    left: 5%;
-    animation-delay: -2s;
-    animation-duration: 12s;
-}
-
-.decoracoes-fundo span:nth-child(2) {
-    left: 15%;
-    animation-delay: -5s;
-    animation-duration: 15s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(3) {
-    left: 25%;
-    animation-delay: -8s;
-    animation-duration: 11s;
-}
-
-.decoracoes-fundo span:nth-child(4) {
-    left: 35%;
-    animation-delay: -3s;
-    animation-duration: 14s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(5) {
-    left: 45%;
-    animation-delay: -10s;
-    animation-duration: 13s;
-}
-
-.decoracoes-fundo span:nth-child(6) {
-    left: 55%;
-    animation-delay: -6s;
-    animation-duration: 16s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(7) {
-    left: 65%;
-    animation-delay: -1s;
-    animation-duration: 12s;
-}
-
-.decoracoes-fundo span:nth-child(8) {
-    left: 75%;
-    animation-delay: -9s;
-    animation-duration: 15s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(9) {
-    left: 85%;
-    animation-delay: -4s;
-    animation-duration: 13s;
-}
-
-.decoracoes-fundo span:nth-child(10) {
-    left: 95%;
-    animation-delay: -7s;
-    animation-duration: 14s;
-    color: #ffe5b4;
-}
-
-.decoracoes-fundo span:nth-child(11) {
-    left: 30%;
-    animation-delay: -11s;
-    animation-duration: 17s;
-}
-
-.decoracoes-fundo span:nth-child(12) {
-    left: 70%;
-    animation-delay: -5s;
-    animation-duration: 11s;
-    color: #ffe5b4;
-}
-
-
-/* ANIMAÇÃO DOS CORAÇÕES */
+/* ================================= */
+/* ANIMAÇÕES */
+/* ================================= */
 
 @keyframes subirCoracao {
 
@@ -615,9 +517,18 @@ button:hover {
 }
 
 
-/* ================================= */
-/* OUTRAS ANIMAÇÕES */
-/* ================================= */
+@keyframes flutuarKamijo {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+}
+
 
 @keyframes aparecer {
 
@@ -633,6 +544,7 @@ button:hover {
 
 }
 
+
 @keyframes pulsar {
 
     0%, 100% {
@@ -647,7 +559,7 @@ button:hover {
 
 
 /* ================================= */
-/* VERSÃO PARA CELULAR */
+/* CELULAR */
 /* ================================= */
 
 @media (max-width: 600px) {
@@ -703,10 +615,6 @@ button:hover {
         font-size: 14px;
     }
 
-    .decoracoes-fundo span {
-        font-size: 19px;
-    }
-
 }
 
 
@@ -716,14 +624,15 @@ button:hover {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .decoracoes-fundo span,
+    .coracao-flutuante,
     .kamijo-flutuante,
-    .eu-te-amo {
+    .eu-te-amo,
+    .tela.ativa {
         animation: none;
     }
 
-    .tela.ativa {
-        animation: none;
+    .coracao-flutuante {
+        display: none;
     }
 
 }

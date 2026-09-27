@@ -1,21 +1,21 @@
+function trocarTela(telaAtual, proximaTela) {
+
+    document.querySelector(telaAtual).classList.remove("ativa");
+
+    document.querySelector(proximaTela).classList.add("ativa");
+
+}
+
+
 function iniciarSurpresa() {
 
-    const inicio = document.querySelector(".inicio");
-    const surpresa = document.querySelector(".surpresa");
-
-    inicio.style.display = "none";
-    surpresa.style.display = "flex";
+    trocarTela(".inicio", ".surpresa");
 
 }
 
 
 function mostrarHistoria() {
 
-    const surpresa = document.querySelector(".surpresa");
-    const historia = document.querySelector(".historia");
-
-    surpresa.style.display = "none";
-
-    historia.style.setProperty("display", "flex", "important");
+    trocarTela(".surpresa", ".historia");
 
 }

@@ -20,6 +20,17 @@ function trocarTela(numero) {
     // Volta para o início da página.
     window.scrollTo(0, 0);
 
+    // troca as partículas dependendo da tela
+
+const coracoes = document.querySelector(".coracoes");
+const telaFavoritos = document.querySelector(".favoritos");
+
+if (telaFavoritos.classList.contains("ativa")) {
+    coracoes.style.display = "none";
+} else {
+    coracoes.style.display = "block";
+}
+
 }
 
 

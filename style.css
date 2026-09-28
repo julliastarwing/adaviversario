@@ -4845,3 +4845,574 @@ button:hover {
     }
 
 }
+
+/* ================================================= */
+/* TELA 3 — CARTA GUARDADA */
+/* ================================================= */
+
+.introducao {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            #65354f 0%,
+            #3c2032 42%,
+            #170d14 100%
+        );
+}
+
+
+/* sombra/vinheta */
+
+.introducao::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            #08040888 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* DECORAÇÕES DO FUNDO */
+/* ================================================= */
+
+.introducao .enfeites-carta {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.introducao .estrelinha-carta {
+    position: absolute;
+
+    color: #d7a6b8;
+
+    font-family: Georgia, serif;
+
+    opacity: 0.5;
+
+    text-shadow:
+        0 0 8px #efb5ca55;
+
+    animation:
+        brilhoCarta 4s ease-in-out infinite;
+}
+
+
+.introducao .estrela-carta-1 {
+    top: 18%;
+    left: 11%;
+
+    font-size: 17px;
+}
+
+
+.introducao .estrela-carta-2 {
+    top: 28%;
+    right: 12%;
+
+    font-size: 13px;
+
+    animation-delay: -1.3s;
+}
+
+
+.introducao .estrela-carta-3 {
+    bottom: 22%;
+    left: 14%;
+
+    font-size: 12px;
+
+    animation-delay: -2.4s;
+}
+
+
+.introducao .estrela-carta-4 {
+    right: 11%;
+    bottom: 16%;
+
+    font-size: 17px;
+
+    animation-delay: -3.1s;
+}
+
+
+@keyframes brilhoCarta {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* rabiscos */
+
+.introducao .rabisco-carta {
+    position: absolute;
+
+    color: #c787a1;
+
+    font-family: Georgia, serif;
+
+    opacity: 0.5;
+}
+
+
+.introducao .rabisco-carta-1 {
+    top: 48%;
+    left: 7%;
+
+    font-size: 24px;
+
+    transform: rotate(-17deg);
+}
+
+
+.introducao .rabisco-carta-2 {
+    top: 53%;
+    right: 8%;
+
+    font-size: 20px;
+
+    transform: rotate(14deg);
+}
+
+
+/* pontinhos verticais */
+
+.introducao .linha-costura {
+    position: absolute;
+
+    top: 50%;
+
+    color: #b77c94;
+
+    font-family: Georgia, serif;
+    font-size: 11px;
+
+    writing-mode: vertical-rl;
+
+    letter-spacing: 4px;
+
+    opacity: 0.35;
+}
+
+
+.introducao .linha-costura-esq {
+    left: 28px;
+
+    transform:
+        translateY(-50%)
+        rotate(180deg);
+}
+
+
+.introducao .linha-costura-dir {
+    right: 28px;
+
+    transform:
+        translateY(-50%);
+}
+
+
+/* ================================================= */
+/* PAPEL */
+/* ================================================= */
+
+.introducao .cartinha {
+    position: relative;
+
+    z-index: 4;
+
+    max-width: 590px;
+
+    padding:
+        64px
+        48px
+        44px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 31px,
+            #9c77610b 32px
+        ),
+        linear-gradient(
+            145deg,
+            #f5e6dc,
+            #ead4cc
+        );
+
+    border:
+        1px solid #b58b80;
+
+    border-radius: 2px;
+
+    box-shadow:
+        8px 12px 0 #12090e55,
+        0 25px 50px #00000055,
+        inset 0 0 40px #986c5b18;
+
+    transform:
+        rotate(-0.7deg);
+}
+
+
+/* moldura fina dentro do papel */
+
+.introducao .cartinha::before {
+    content: "";
+
+    position: absolute;
+    inset: 13px;
+
+    border:
+        1px solid #aa807355;
+
+    pointer-events: none;
+}
+
+
+/* coração grandinho como marca d'água */
+
+.introducao .cartinha::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 25px;
+    bottom: 13px;
+
+    color: #9c6a7b;
+
+    font-family: Georgia, serif;
+    font-size: 70px;
+
+    opacity: 0.09;
+
+    transform:
+        rotate(-15deg);
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* FITINHAS COLANDO A CARTA */
+/* ================================================= */
+
+.introducao .fita-carta {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 78px;
+    height: 23px;
+
+    background:
+        #d8b3b0aa;
+
+    border-left:
+        1px dashed #8f6b6855;
+
+    border-right:
+        1px dashed #8f6b6855;
+
+    box-shadow:
+        0 2px 5px #0002;
+
+    opacity: 0.75;
+
+    pointer-events: none;
+}
+
+
+.introducao .fita-carta-esq {
+    top: -9px;
+    left: 22px;
+
+    transform:
+        rotate(-8deg);
+}
+
+
+.introducao .fita-carta-dir {
+    top: -8px;
+    right: 25px;
+
+    transform:
+        rotate(7deg);
+}
+
+
+/* ================================================= */
+/* CABEÇALHO DA CARTA */
+/* ================================================= */
+
+.introducao .cabecalho-papel {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+
+.introducao .data-carta {
+    color: #8b626c;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* carimbo J + D */
+
+.introducao .carimbo-carta {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: #986777;
+
+    border:
+        1px solid #98677799;
+
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+    font-size: 10px;
+    font-style: italic;
+
+    transform:
+        rotate(10deg);
+
+    opacity: 0.75;
+}
+
+
+.introducao .carimbo-carta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 39px;
+    height: 39px;
+
+    border:
+        1px dashed #98677766;
+
+    border-radius: 50%;
+}
+
+
+/* ================================================= */
+/* TEXTO NO PAPEL */
+/* ================================================= */
+
+.introducao .cartinha p {
+    position: relative;
+
+    z-index: 3;
+
+    color: #573c44;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+    line-height: 1.95;
+
+    text-shadow: none;
+}
+
+
+/* ================================================= */
+/* BOTÃO */
+/* ================================================= */
+
+.introducao .conteudo > button {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: 27px;
+
+    padding:
+        13px
+        31px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #9b5875,
+            #713b55
+        );
+
+    border:
+        1px solid #d5a0b4;
+
+    border-radius: 3px;
+
+    color: #f6e5eb;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+    font-style: italic;
+
+    box-shadow:
+        4px 5px 0 #10080c88;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.introducao .conteudo > button::before {
+    content: "♡";
+
+    margin-right: 8px;
+
+    color: #edbfd0;
+}
+
+
+.introducao .conteudo > button:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #b66a89,
+            #874762
+        );
+
+    transform:
+        translateY(-3px)
+        rotate(1deg);
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .introducao {
+        padding:
+            85px
+            27px
+            55px;
+    }
+
+
+    .introducao .cartinha {
+        padding:
+            55px
+            28px
+            38px;
+
+        transform: none;
+    }
+
+
+    .introducao .cartinha::before {
+        inset: 8px;
+    }
+
+
+    .introducao .cartinha p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .introducao .data-carta {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .introducao .carimbo-carta {
+        width: 42px;
+        height: 42px;
+
+        font-size: 9px;
+    }
+
+
+    .introducao .carimbo-carta::after {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .introducao .fita-carta {
+        width: 58px;
+        height: 19px;
+    }
+
+
+    .introducao .linha-costura {
+        display: none;
+    }
+
+
+    .introducao .rabisco-carta {
+        opacity: 0.3;
+    }
+
+
+    .introducao .estrela-carta-1 {
+        left: 6%;
+    }
+
+
+    .introducao .estrela-carta-2 {
+        right: 6%;
+    }
+
+}

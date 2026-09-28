@@ -2241,3 +2241,196 @@ button:hover {
         opacity: 0;
     }
 }
+
+/* ======================================== */
+/* CORREÇÃO FINAL — PARTÍCULAS DA TELA 5 */
+/* ======================================== */
+
+
+/* Quando DAVI.exe estiver aberto,
+   esconde os corações românticos globais */
+
+body:has(.favoritos.ativa) > .coracoes {
+    display: none;
+}
+
+
+/* Camada dos símbolos digitais */
+
+.favoritos .particulas-sistema {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    overflow: hidden !important;
+    pointer-events: none !important;
+
+    z-index: 1 !important;
+}
+
+
+/* Cada símbolo vira uma partícula independente */
+
+.favoritos .particulas-sistema > span {
+    position: absolute !important;
+
+    display: block !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: -40px !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #9fbea0 !important;
+
+    font-family: "Courier New", monospace !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 5px #a8d69d99,
+        0 0 13px #a8d69d44;
+
+    animation-name: subirDados !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+}
+
+
+/* ======================================== */
+/* POSIÇÕES */
+/* ======================================== */
+
+.favoritos .particulas-sistema > span:nth-child(1) {
+    left: 5% !important;
+    animation-duration: 15s !important;
+    animation-delay: -2s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(2) {
+    left: 14% !important;
+    animation-duration: 19s !important;
+    animation-delay: -11s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(3) {
+    left: 23% !important;
+    animation-duration: 17s !important;
+    animation-delay: -6s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(4) {
+    left: 32% !important;
+    animation-duration: 21s !important;
+    animation-delay: -15s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(5) {
+    left: 41% !important;
+    animation-duration: 16s !important;
+    animation-delay: -8s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(6) {
+    left: 50% !important;
+    animation-duration: 20s !important;
+    animation-delay: -4s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(7) {
+    left: 59% !important;
+    animation-duration: 18s !important;
+    animation-delay: -13s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(8) {
+    left: 68% !important;
+    animation-duration: 22s !important;
+    animation-delay: -9s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(9) {
+    left: 76% !important;
+    animation-duration: 16s !important;
+    animation-delay: -5s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(10) {
+    left: 84% !important;
+    animation-duration: 20s !important;
+    animation-delay: -17s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(11) {
+    left: 91% !important;
+    animation-duration: 18s !important;
+    animation-delay: -10s !important;
+}
+
+.favoritos .particulas-sistema > span:nth-child(12) {
+    left: 96% !important;
+    animation-duration: 23s !important;
+    animation-delay: -19s !important;
+}
+
+
+/* ======================================== */
+/* ANIMAÇÃO */
+/* ======================================== */
+
+@keyframes subirDados {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.45;
+    }
+
+    30% {
+        transform:
+            translateY(-30vh)
+            translateX(8px);
+
+        opacity: 0.3;
+    }
+
+    55% {
+        transform:
+            translateY(-60vh)
+            translateX(-7px);
+
+        opacity: 0.4;
+    }
+
+    80% {
+        transform:
+            translateY(-90vh)
+            translateX(5px);
+
+        opacity: 0.25;
+    }
+
+    100% {
+        transform:
+            translateY(-125vh)
+            translateX(-4px);
+
+        opacity: 0;
+    }
+}

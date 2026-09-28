@@ -1067,3 +1067,192 @@ button:hover {
         bottom: 16px;
     }
 }
+
+
+/* ================================= */
+/* TELA 3 — CARTA ANTIGA ROMÂNTICA */
+/* ================================= */
+
+/* Fundo suave em tons de vinho e rosa */
+
+.introducao {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            #583347 0%,
+            #34202e 55%,
+            #1a0d14 100%
+        );
+
+    padding: 85px 25px;
+}
+
+/* Moldura delicada ao redor da tela */
+
+.introducao::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+
+    border: 2px dotted #dba5bb;
+    border-radius: 20px;
+
+    pointer-events: none;
+}
+
+/* Ornamento na parte superior */
+
+.introducao::after {
+    content: "✧ ─── ♡ ─── ✧";
+
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #f2bdd3;
+    font-size: 17px;
+    letter-spacing: 3px;
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+/* Conteúdo acima dos ornamentos */
+
+.introducao .conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título com aparência romântica */
+
+.introducao h2 {
+    color: #ffd4e5;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+
+    text-shadow: 0 0 12px #ffb9d533;
+}
+
+/* Carta de papel antigo */
+
+.introducao .cartinha {
+    position: relative;
+
+    width: 100%;
+    max-width: 580px;
+
+    padding: 55px 40px 45px;
+    margin: 35px 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff4ef,
+            #f4dce0
+        );
+
+    color: #59374b;
+
+    border: 1px solid #c78fa7;
+    border-radius: 6px;
+
+    box-shadow:
+        0 0 0 7px #e8b8cb20,
+        0 15px 40px #00000066;
+
+    transform: rotate(-1deg);
+}
+
+/* Borda rendada dentro da carta */
+
+.introducao .cartinha::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border: 2px dotted #c78fa7;
+    border-radius: 3px;
+
+    pointer-events: none;
+}
+
+/* Lacinho decorativo no topo da carta */
+
+.introducao .cartinha::after {
+    content: "୨୧";
+
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #ffd4e5;
+    font-size: 42px;
+    line-height: 1;
+
+    text-shadow: 0 2px 8px #00000055;
+}
+
+/* Texto dentro da carta */
+
+.introducao .cartinha p {
+    position: relative;
+    z-index: 1;
+
+    color: #59374b;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* Botão da tela 3 */
+
+.introducao .conteudo > button {
+    background: #b76d91;
+    border: 1px solid #ffd4e5;
+    color: white;
+}
+
+.introducao .conteudo > button:hover {
+    background: #d48bac;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .introducao {
+        padding: 85px 30px 55px;
+    }
+
+    .introducao::before {
+        inset: 10px;
+    }
+
+    .introducao::after {
+        top: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .introducao .cartinha {
+        padding: 45px 25px 30px;
+        transform: none;
+    }
+
+    .introducao .cartinha p {
+        font-size: 16px;
+    }
+
+    .introducao .cartinha::after {
+        font-size: 34px;
+        top: -20px;
+    }
+}

@@ -764,121 +764,61 @@ button:hover {
 
 }
 
+/* LAÇOS DA PRIMEIRA TELA */
 
-/* ================================= */
-/* RENDAS E LAÇOS DA PRIMEIRA TELA */
-/* ================================= */
+.inicio {
+    position: relative;
+    overflow: hidden;
+}
 
 .enfeites-inicio {
     position: absolute;
     inset: 0;
-
     pointer-events: none;
     z-index: 4;
 }
 
-/* LAÇOS */
-
-.laco {
+.enfeite {
     position: absolute;
-
+    display: block;
     color: #ffc4db;
-    font-size: 34px;
-
-    text-shadow: 0 0 12px #ff91bd55;
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 0 0 8px #ff91bd55;
 }
 
-/* QUATRO CANTOS */
-
-.canto-superior-esquerdo {
-    top: 22px;
-    left: 26px;
-    transform: rotate(-35deg);
+.topo-esquerdo {
+    top: 30px;
+    left: 35px;
 }
 
-.canto-superior-direito {
-    top: 22px;
-    right: 26px;
-    transform: rotate(35deg);
+.topo-direito {
+    top: 30px;
+    right: 35px;
 }
 
-.canto-inferior-esquerdo {
-    bottom: 22px;
-    left: 26px;
-    transform: rotate(35deg);
+.baixo-esquerdo {
+    bottom: 30px;
+    left: 35px;
 }
 
-.canto-inferior-direito {
-    bottom: 22px;
-    right: 26px;
-    transform: rotate(-35deg);
+.baixo-direito {
+    bottom: 30px;
+    right: 35px;
 }
-
-/* DETALHES FLORAIS */
-
-.renda {
-    position: absolute;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    color: #e8a8c4;
-
-    font-size: 17px;
-    letter-spacing: 5px;
-
-    white-space: nowrap;
-
-    opacity: 0.8;
-}
-
-.renda-superior {
-    top: 28px;
-}
-
-.renda-inferior {
-    bottom: 28px;
-}
-
-/* AJUSTES PARA CELULAR */
 
 @media (max-width: 600px) {
-
-    .laco {
-        font-size: 24px;
+    .enfeite {
+        font-size: 22px;
     }
 
-    .canto-superior-esquerdo {
-        top: 14px;
-        left: 16px;
+    .topo-esquerdo,
+    .baixo-esquerdo {
+        left: 20px;
     }
 
-    .canto-superior-direito {
-        top: 14px;
-        right: 16px;
+    .topo-direito,
+    .baixo-direito {
+        right: 20px;
     }
-
-    .canto-inferior-esquerdo {
-        bottom: 14px;
-        left: 16px;
-    }
-
-    .canto-inferior-direito {
-        bottom: 14px;
-        right: 16px;
-    }
-
-    .renda {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    .renda-superior {
-        top: 19px;
-    }
-
-    .renda-inferior {
-        bottom: 19px;
-    }
-
 }

@@ -6,14 +6,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;/* MOSTRAR OS CORAÇÕES TAMBÉM NA TELA INICIAL */
-
-.inicio {
-    background: radial-gradient(
-        circle,
-        #452039,
-        #1a0d14 70%
-    );
+    box-sizing: border-box;
 }
 
 html {
@@ -700,21 +693,4 @@ button:hover {
         display: none;
     }
 
-}
-/* MOSTRAR OS CORAÇÕES TAMBÉM NA TELA INICIAL */
-
-.inicio {
-    background: transparent;
-}
-
-.inicio::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle,
-        #452039,
-        #1a0d14 70%
-    );
-    z-index: -1;
 }

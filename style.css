@@ -3291,3 +3291,617 @@ button:hover {
     left: 17%;
     bottom: 14%;
 }
+
+/* ================================================= */
+/* TELA 7 — A ÚLTIMA CARTA */
+/* ================================================= */
+
+.final {
+    position: relative;
+    overflow: hidden;
+
+    padding: 95px 30px 75px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            #583044 0%,
+            #321b29 45%,
+            #160c13 100%
+        );
+}
+
+
+/* vinheta escura */
+
+.final::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            #09040899 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* moldura externa */
+
+.final::after {
+    content: "";
+
+    position: absolute;
+    inset: 18px;
+
+    border: 1px solid #b89770;
+
+    box-shadow:
+        inset 0 0 0 5px #b8977008,
+        inset 0 0 50px #00000044;
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+.final .conteudo {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 760px;
+}
+
+
+/* pequena etiqueta */
+
+.final .ultima-pagina {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #b99c87;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* título */
+
+.final .conteudo > h2:not(.eu-te-amo) {
+    margin-bottom: 10px;
+
+    color: #ead3bd;
+
+    font-family: Georgia, serif;
+    font-size: clamp(31px, 5vw, 45px);
+    font-weight: normal;
+    font-style: italic;
+
+    text-shadow:
+        0 0 18px #e3b59b22;
+}
+
+
+/* subtítulo */
+
+.final .subtitulo-final {
+    margin-bottom: 38px;
+
+    color: #c4a6ae;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================================= */
+/* CARTA */
+/* ================================================= */
+
+.final .carta-final {
+    position: relative;
+
+    width: 100%;
+    max-width: 610px;
+
+    margin: 0 auto;
+
+    padding: 58px 55px 48px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 31px,
+            #94796810 32px
+        ),
+        linear-gradient(
+            145deg,
+            #f5eadc,
+            #ead8c6
+        );
+
+    color: #513a40;
+
+    border: 1px solid #b89b82;
+    border-radius: 2px;
+
+    box-shadow:
+        0 0 0 6px #b8977010,
+        0 20px 50px #00000088,
+        inset 0 0 40px #9e785720;
+
+    text-align: left;
+
+    transform: rotate(-0.4deg);
+}
+
+
+/* borda interna */
+
+.final .carta-final::before {
+    content: "";
+
+    position: absolute;
+    inset: 13px;
+
+    border: 1px solid #a9847455;
+
+    pointer-events: none;
+}
+
+
+/* coração transparente no papel */
+
+.final .carta-final::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 20px;
+
+    color: #9c6b7866;
+
+    font-family: Georgia, serif;
+    font-size: 65px;
+
+    transform: rotate(-15deg);
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* TOPO DA CARTA */
+/* ================================================= */
+
+.final .cabecalho-carta-final {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color: #9b6975;
+
+    font-family: Georgia, serif;
+}
+
+
+.final .linha-carta {
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    background: #a47a7455;
+}
+
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.final .carta-final p {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 25px;
+
+    color: #513a40;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.95;
+}
+
+
+.final .saudacao-final {
+    color: #744e5b !important;
+
+    font-size: 19px !important;
+    font-style: italic;
+
+    margin-bottom: 30px !important;
+}
+
+
+/* separador */
+
+.final .separador-final {
+    margin: 35px 0 25px;
+
+    color: #996878;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    text-align: center;
+
+    letter-spacing: 5px;
+}
+
+
+/* assinatura */
+
+.final .assinatura {
+    position: relative;
+    z-index: 2;
+
+    margin: 30px 10px 0 0 !important;
+
+    color: #744e5b !important;
+
+    font-size: 18px !important;
+    font-style: italic;
+
+    text-align: right;
+}
+
+
+/* J + D */
+
+.final .marca-carta {
+    position: absolute;
+
+    left: 28px;
+    bottom: 24px;
+
+    color: #8b6a68;
+
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+}
+
+
+/* ================================================= */
+/* DECLARAÇÃO FINAL */
+/* ================================================= */
+
+.final .declaracao-final {
+    position: relative;
+
+    margin-top: 48px;
+
+    text-align: center;
+}
+
+
+.final .declaracao-pequena {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #a98d94;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* EU TE AMO */
+
+.final .eu-te-amo {
+    margin: 0;
+
+    color: #f3cfda;
+
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 7vw, 62px);
+    font-weight: normal;
+    font-style: italic;
+
+    text-shadow:
+        0 0 12px #ffbdd544,
+        0 0 35px #d59ab422;
+
+    animation:
+        pulsarAmor 3s ease-in-out infinite;
+}
+
+
+@keyframes pulsarAmor {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.035);
+        opacity: 1;
+    }
+
+}
+
+
+.final .declaracao-ornamento {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #b9967c;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+
+    letter-spacing: 8px;
+}
+
+
+/* ================================================= */
+/* DECORAÇÃO DO FUNDO */
+/* ================================================= */
+
+.final .enfeites-final {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.final .ornamento-final {
+    position: absolute;
+
+    color: #c0a079;
+
+    font-family: Georgia, serif;
+}
+
+
+.final .ornamento-final-topo {
+    top: 32px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+
+.final .estrela-final {
+    position: absolute;
+
+    color: #c29aab;
+
+    font-family: Georgia, serif;
+
+    opacity: 0.55;
+}
+
+
+.final .estrela-final-1 {
+    top: 20%;
+    left: 8%;
+
+    font-size: 20px;
+}
+
+
+.final .estrela-final-2 {
+    top: 36%;
+    right: 8%;
+
+    font-size: 18px;
+}
+
+
+.final .estrela-final-3 {
+    bottom: 24%;
+    left: 10%;
+
+    font-size: 16px;
+}
+
+
+.final .estrela-final-4 {
+    bottom: 12%;
+    right: 11%;
+
+    font-size: 21px;
+}
+
+
+/* ================================================= */
+/* BOTÃO FINAL */
+/* ================================================= */
+
+.final .conteudo > button {
+    margin-top: 38px;
+
+    padding: 13px 30px;
+
+    background: #704154;
+
+    border: 1px solid #c2a17b;
+    border-radius: 3px;
+
+    color: #f4dfd3;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+
+    box-shadow:
+        4px 4px 0 #0e070b88;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.final .conteudo > button:hover {
+    background: #8e536c;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        4px 7px 0 #0e070b88;
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .final {
+        padding:
+            85px
+            27px
+            55px;
+    }
+
+
+    .final::after {
+        inset: 9px;
+    }
+
+
+    .final .ornamento-final-topo {
+        top: 22px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+
+    .final .ultima-pagina {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    .final .subtitulo-final {
+        font-size: 12px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .final .carta-final {
+        padding:
+            48px
+            27px
+            40px;
+
+        transform: none;
+    }
+
+
+    .final .carta-final::before {
+        inset: 8px;
+    }
+
+
+    .final .carta-final p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .final .saudacao-final {
+        font-size: 17px !important;
+    }
+
+
+    .final .assinatura {
+        font-size: 16px !important;
+    }
+
+
+    .final .linha-carta {
+        width: 32px;
+    }
+
+
+    .final .carta-final::after {
+        right: 17px;
+        bottom: 17px;
+
+        font-size: 45px;
+    }
+
+
+    .final .marca-carta {
+        left: 18px;
+        bottom: 17px;
+    }
+
+
+    .final .estrela-final {
+        opacity: 0.3;
+    }
+
+
+    .final .eu-te-amo {
+        font-size: 43px;
+    }
+
+}
+
+
+/* acessibilidade */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .final .eu-te-amo {
+        animation: none;
+    }
+
+}

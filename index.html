@@ -246,44 +246,177 @@
 
 
     <!-- TELA 5: COISAS QUE LEMBRAM ELE -->
-    <section class="tela favoritos">
+    
+<!-- ================================= -->
+<!-- TELA 5 — DAVI.exe -->
+<!-- ================================= -->
 
-        <div class="conteudo">
+<section class="tela favoritos">
 
-            <h2>coisas que têm a sua cara</h2>
+    <div class="conteudo">
 
-            <p>
-                pequenas coisas que sempre
-                me fazem lembrar de você ♡
-            </p>
+        <!-- BARRA SUPERIOR DO SISTEMA -->
 
-            <div class="grade-favoritos">
+        <div class="terminal-cabecalho">
 
-                <div class="item-favorito">
-                    <span>🎸</span>
-                    <h3>visual kei</h3>
-                    <p>[Escreva aqui.]</p>
-                </div>
+            <span>DAVI.exe</span>
 
-                <div class="item-favorito">
-                    <span>🎮</span>
-                    <h3>jogos antigos</h3>
-                    <p>[Escreva aqui.]</p>
-                </div>
+            <span class="terminal-status">
+                ● SYSTEM ONLINE
+            </span>
 
-                <div class="item-favorito">
-                    <span>🎵</span>
-                    <h3>suas músicas</h3>
-                    <p>[Escreva aqui.]</p>
-                </div>
+        </div>
 
-                <div class="item-favorito">
-                    <span>♡</span>
-                    <h3>suas coisinhas</h3>
-                    <p>[Escreva aqui.]</p>
-                </div>
+
+        <!-- CÓDIGO C# DECORATIVO -->
+
+        <div class="codigo-csharp" aria-hidden="true">
+
+            <span class="codigo-comentario">
+                // accessing memory database...
+            </span>
+
+            <span>
+                <span class="codigo-palavra">using</span>
+                System;
+            </span>
+
+            <span>
+                <span class="codigo-palavra">using</span>
+                UnityEngine;
+            </span>
+
+            <span class="codigo-vazio"></span>
+
+            <span>
+                <span class="codigo-palavra">public class</span>
+                <span class="codigo-tipo">Davi</span>
+                : MonoBehaviour
+            </span>
+
+            <span>{</span>
+
+            <span class="codigo-indentado">
+                <span class="codigo-palavra">public bool</span>
+                IsLoved =
+                <span class="codigo-valor">true</span>;
+            </span>
+
+            <span class="codigo-indentado">
+                <span class="codigo-palavra">public string</span>
+                Status =
+                <span class="codigo-texto">"eternal"</span>;
+            </span>
+
+            <span>}</span>
+
+        </div>
+
+
+        <!-- TÍTULO ORIGINAL DA TELA -->
+
+        <div class="terminal-titulo">
+
+            <span class="terminal-etiqueta">
+                [ MEMORY DATABASE / 04 FILES ]
+            </span>
+
+            <h2>coisas que me lembram você</h2>
+
+            <p>a collection of you ♡</p>
+
+        </div>
+
+
+        <!-- OS QUATRO ARQUIVOS -->
+
+        <div class="grade-favoritos">
+
+            <!-- 01: VISUAL KEI -->
+
+            <div class="item-favorito arquivo-visualkei">
+
+                <span class="arquivo-simbolo">✝</span>
+
+                <h3>visual kei</h3>
+
+                <p>[Escreva aqui.]</p>
+
+                <span class="arquivo-status">
+                    ● LOADED
+                </span>
 
             </div>
+
+
+            <!-- 02: MÚSICA -->
+
+            <div class="item-favorito arquivo-musica">
+
+                <span class="arquivo-simbolo">♫</span>
+
+                <h3>música</h3>
+
+                <p>[Escreva aqui.]</p>
+
+                <span class="arquivo-status">
+                    ● LOADED
+                </span>
+
+            </div>
+
+
+            <!-- 03: NEBLINA -->
+
+            <div class="item-favorito arquivo-neblina">
+
+                <span class="arquivo-simbolo">☁</span>
+
+                <h3>clima nublado</h3>
+
+                <p>[Escreva aqui.]</p>
+
+                <span class="arquivo-status">
+                    ● LOADED
+                </span>
+
+            </div>
+
+
+            <!-- 04: LILY CHOU-CHOU -->
+
+            <div class="item-favorito arquivo-lily">
+
+                <span class="arquivo-simbolo">✿</span>
+
+                <h3>lily chou-chou</h3>
+
+                <p>[Escreva aqui.]</p>
+
+                <span class="arquivo-status">
+                    ● LOADED
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- TERMINAL INFERIOR -->
+
+        <div class="terminal-rodape" aria-hidden="true">
+
+            <p>&gt; 4 memories successfully loaded</p>
+
+            <p>
+                &gt; connection established
+                <span class="cursor-terminal">_</span>
+            </p>
+
+        </div>
+
+
+        <!-- BOTÃO PARA A TELA 6 -->
 
             <button onclick="trocarTela(5)">
                 continuar ♡

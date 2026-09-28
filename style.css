@@ -924,3 +924,146 @@ button:hover {
     }
 
 }
+
+
+/* ================================= */
+/* ROSAS E ORNAMENTOS DO KAMIJO */
+/* ================================= */
+
+/* Camada decorativa */
+
+.surpresa .enfeites-kamijo {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Rosas nos quatro cantos */
+
+.surpresa .rosa-kamijo {
+    position: absolute;
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    opacity: 0.85;
+
+    filter: drop-shadow(
+        0 0 7px #c5a67844
+    );
+}
+
+.surpresa .rosa-se {
+    top: 42px;
+    left: 42px;
+    transform: rotate(-25deg);
+}
+
+.surpresa .rosa-sd {
+    top: 42px;
+    right: 42px;
+    transform: rotate(25deg);
+}
+
+.surpresa .rosa-ie {
+    bottom: 42px;
+    left: 42px;
+    transform: rotate(25deg);
+}
+
+.surpresa .rosa-id {
+    bottom: 42px;
+    right: 42px;
+    transform: rotate(-25deg);
+}
+
+/* Ornamentos dourados */
+
+.surpresa .ornamento-kamijo {
+    position: absolute;
+    display: block;
+
+    color: #c5a678;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+    text-shadow: 0 0 8px #c5a67833;
+}
+
+/* Ornamentos laterais */
+
+.surpresa .ornamento-esquerdo {
+    top: 50%;
+    left: 38px;
+    writing-mode: vertical-rl;
+}
+
+.surpresa .ornamento-direito {
+    top: 50%;
+    right: 38px;
+    writing-mode: vertical-rl;
+}
+
+/* Ornamento inferior */
+
+.surpresa .ornamento-inferior {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* Mantém o conteúdo acima dos enfeites */
+
+.surpresa .conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .surpresa .rosa-kamijo {
+        font-size: 19px;
+    }
+
+    .surpresa .rosa-se {
+        top: 25px;
+        left: 22px;
+    }
+
+    .surpresa .rosa-sd {
+        top: 25px;
+        right: 22px;
+    }
+
+    .surpresa .rosa-ie {
+        bottom: 25px;
+        left: 22px;
+    }
+
+    .surpresa .rosa-id {
+        bottom: 25px;
+        right: 22px;
+    }
+
+    .surpresa .ornamento-esquerdo {
+        left: 15px;
+    }
+
+    .surpresa .ornamento-direito {
+        right: 15px;
+    }
+
+    .surpresa .ornamento-kamijo {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .surpresa .ornamento-inferior {
+        bottom: 16px;
+    }
+}

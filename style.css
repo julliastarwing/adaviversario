@@ -2247,14 +2247,6 @@ button:hover {
 /* ======================================== */
 
 
-/* Quando DAVI.exe estiver aberto,
-   esconde os corações românticos globais */
-
-body:has(.favoritos.ativa) > .coracoes {
-    display: none;
-}
-
-
 /* Camada dos símbolos digitais */
 
 .favoritos .particulas-sistema {

@@ -3228,3 +3228,65 @@ button:hover {
         font-size: 7px;
     }
 }
+
+/* ======================================== */
+/* AJUSTE DOS RABISCOS — TELA 6 */
+/* ======================================== */
+
+/* "favorite person study" mais perto do título */
+.meus-olhos .anotacao-estudo {
+    top: 10%;
+    right: 11%;
+
+    font-size: 9px;
+    transform: rotate(2deg);
+}
+
+
+/* setinha apontando para a foto */
+.meus-olhos .seta-foto {
+    top: 43%;
+    left: 35%;
+
+    font-size: 24px;
+    transform: rotate(15deg);
+}
+
+
+/* frase ao lado da foto, sem entrar no texto */
+.meus-olhos .anotacao-foto {
+    top: 47%;
+    left: 34%;
+
+    max-width: 105px;
+
+    font-size: 9px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    transform: rotate(-6deg);
+}
+
+
+/* número da página mais para dentro */
+.meus-olhos .numero-pagina {
+    right: 35px;
+    bottom: 25px;
+
+    font-size: 9px;
+}
+
+
+/* x x x mais para dentro da página */
+.meus-olhos .rabisquinho-4 {
+    right: 16%;
+    bottom: 9%;
+}
+
+
+/* estrelinha inferior não fica colada na margem */
+.meus-olhos .rabisquinho-3 {
+    left: 17%;
+    bottom: 14%;
+}

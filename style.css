@@ -3011,24 +3011,25 @@ button:hover {
 
 
 .meus-olhos .seta-foto {
-    top: 39%;
-    left: 44%;
+    top: 29%;
+    left: 38%;
 
-    font-size: 27px;
-
-    transform: rotate(10deg);
+    font-size: 22px;
+    transform: rotate(25deg);
 }
 
-
 .meus-olhos .anotacao-foto {
-    top: 44%;
-    left: 40%;
+    top: 32%;
+    left: 34%;
 
-    max-width: 130px;
+    max-width: 115px;
 
-    font-size: 10px;
+    font-size: 9px;
+    line-height: 1.4;
 
-    transform: rotate(-7deg);
+    text-align: center;
+
+    transform: rotate(-5deg);
 }
 
 

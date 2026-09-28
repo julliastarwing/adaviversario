@@ -1,7 +1,5 @@
 
-/* ================================= */
 /* CONFIGURAÇÕES GERAIS */
-/* ================================= */
 
 * {
     margin: 0;
@@ -16,17 +14,13 @@ html {
 body {
     background: #1a0d14;
     color: white;
-
     font-family: Arial, sans-serif;
-
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 
-/* ================================= */
 /* CORAÇÕES E ESTRELINHAS */
-/* ================================= */
 
 .coracoes {
     position: fixed;
@@ -48,8 +42,6 @@ body {
     opacity: 0;
     animation: subirCoracao 12s linear infinite;
 }
-
-/* POSIÇÕES INDIVIDUAIS */
 
 .coracoes span:nth-child(1) {
     left: 5%;
@@ -128,11 +120,7 @@ body {
     animation-duration: 11s;
 }
 
-
-/* ANIMAÇÃO DOS CORAÇÕES */
-
 @keyframes subirCoracao {
-
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0;
@@ -150,30 +138,22 @@ body {
         transform: translateY(-120vh) rotate(360deg);
         opacity: 0;
     }
-
 }
 
 
-/* ================================= */
 /* SISTEMA DE TELAS */
-/* ================================= */
 
 .tela {
     display: none;
-
     position: relative;
     z-index: 1;
-
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-
     padding: 55px 20px;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
@@ -182,7 +162,6 @@ body {
     animation: aparecer 0.7s ease;
 }
 
-/* A tela inicial não precisa da animação de entrada */
 .inicio.ativa {
     animation: none;
 }
@@ -190,16 +169,13 @@ body {
 .conteudo {
     width: 100%;
     max-width: 750px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-/* ================================= */
 /* TEXTOS */
-/* ================================= */
 
 h1 {
     font-size: 45px;
@@ -226,28 +202,19 @@ p {
 }
 
 
-/* ================================= */
 /* BOTÕES */
-/* ================================= */
 
 button {
     background: #ff6196;
     color: white;
-
     border: none;
     border-radius: 30px;
-
     padding: 15px 35px;
     margin-top: 25px;
-
     font-size: 17px;
     font-family: inherit;
-
     cursor: pointer;
-
-    transition:
-        background 0.3s,
-        transform 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
@@ -256,23 +223,18 @@ button:hover {
 }
 
 
-/* ================================= */
-/* TELA 1 - INÍCIO */
-/* ================================= */
+/* TELA 1: INÍCIO */
 
 .inicio {
-    background:
-        radial-gradient(
-            circle,
-            #452039,
-            #1a0d14 70%
-        );
+    background: radial-gradient(
+        circle,
+        #452039,
+        #1a0d14 70%
+    );
 }
 
 
-/* ================================= */
-/* TELA 2 - KAMIJO */
-/* ================================= */
+/* TELA 2: KAMIJO */
 
 .surpresa p {
     max-width: 650px;
@@ -282,51 +244,29 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: 45px 0 15px;
-
     animation: flutuarKamijo 2.5s ease-in-out infinite;
-}
-
-@keyframes flutuarKamijo {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
 }
 
 .balao {
     position: relative;
-
     background: white;
     color: #1a0d14;
-
     max-width: 300px;
-
     padding: 18px;
     margin-bottom: 22px;
-
     border-radius: 22px;
-
     font-size: 16px;
     line-height: 1.5;
-
     box-shadow: 0 5px 20px #0005;
 }
 
 .balao::after {
     content: "";
-
     position: absolute;
-
     bottom: -12px;
     left: 50%;
-
     transform: translateX(-50%);
-
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 14px solid white;
@@ -335,82 +275,57 @@ button:hover {
 .kamijo-flutuante img {
     width: 180px;
     height: 180px;
-
     object-fit: cover;
     border-radius: 50%;
-
     box-shadow: 0 8px 25px #0008;
 }
 
 
-/* ================================= */
-/* TELA 3 - INTRODUÇÃO */
-/* ================================= */
+/* TELA 3: INTRODUÇÃO */
 
 .introducao {
-    background:
-        radial-gradient(
-            circle,
-            #4a2540,
-            #1a0d14 75%
-        );
+    background: radial-gradient(
+        circle,
+        #4a2540,
+        #1a0d14 75%
+    );
 }
 
 .cartinha {
     background: #351d2d;
-
     border: 1px solid #a35c80;
     border-radius: 20px;
-
     padding: 35px 25px;
-
     width: 100%;
     max-width: 550px;
-
     margin: 20px 0;
-
     box-shadow: 0 10px 35px #0004;
 }
 
 
-/* ================================= */
-/* TELA 4 - CARTINHAS */
-/* ================================= */
+/* TELA 4: CARTINHAS */
 
 .grade-cartoes {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
-
     width: 100%;
     max-width: 600px;
-
     margin-top: 20px;
 }
 
 .cartao {
     min-height: 150px;
-
     background: #48243c;
-
     border: 1px solid #a35c80;
     border-radius: 18px;
-
     padding: 20px;
     margin-top: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
-
-    transition:
-        background 0.4s,
-        transform 0.4s;
+    transition: background 0.4s, transform 0.4s;
 }
 
 .cartao:hover {
@@ -424,7 +339,6 @@ button:hover {
 
 .verso {
     display: none;
-
     font-size: 16px;
     line-height: 1.5;
 }
@@ -442,28 +356,20 @@ button:hover {
 }
 
 
-/* ================================= */
-/* TELA 5 - FAVORITOS */
-/* ================================= */
+/* TELA 5: FAVORITOS */
 
 .grade-favoritos {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
-
     width: 100%;
     margin-top: 20px;
 }
 
 .item-favorito {
     background: #351d2d;
-
     border: 1px solid #8d5070;
     border-radius: 20px;
-
     padding: 30px 15px;
 }
 
@@ -482,43 +388,31 @@ button:hover {
 }
 
 
-/* ================================= */
-/* TELA 6 - FOTO */
-/* ================================= */
+/* TELA 6: FOTO */
 
 .moldura-foto {
     background: #fff0f5;
-
     padding: 15px 15px 5px;
-
     width: 260px;
     max-width: 100%;
-
     margin: 20px 0 35px;
-
     transform: rotate(-3deg);
-
     box-shadow: 0 10px 30px #0006;
 }
 
 .espaco-foto {
     height: 250px;
-
     background: #caa0b5;
     color: #4b2539;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
 }
 
 .moldura-foto p {
     color: #4b2539;
-
     margin: 12px 0;
-
     font-size: 17px;
 }
 
@@ -527,33 +421,25 @@ button:hover {
 }
 
 
-/* ================================= */
-/* TELA 7 - CARTA FINAL */
-/* ================================= */
+/* TELA 7: CARTA FINAL */
 
 .final {
-    background:
-        radial-gradient(
-            circle,
-            #522741,
-            #1a0d14 75%
-        );
+    background: radial-gradient(
+        circle,
+        #522741,
+        #1a0d14 75%
+    );
 }
 
 .carta-final {
     width: 100%;
     max-width: 580px;
-
     background: #fff0f5;
     color: #45253b;
-
     border-radius: 8px;
-
     padding: 40px 30px;
     margin: 20px 0;
-
     text-align: left;
-
     box-shadow: 0 10px 40px #0006;
 }
 
@@ -573,12 +459,9 @@ button:hover {
 }
 
 
-/* ================================= */
-/* OUTRAS ANIMAÇÕES */
-/* ================================= */
+/* ANIMAÇÕES */
 
 @keyframes flutuarKamijo {
-
     0%, 100% {
         transform: translateY(0);
     }
@@ -586,11 +469,9 @@ button:hover {
     50% {
         transform: translateY(-30px);
     }
-
 }
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -600,11 +481,9 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 @keyframes pulsar {
-
     0%, 100% {
         transform: scale(1);
     }
@@ -612,16 +491,12 @@ button:hover {
     50% {
         transform: scale(1.08);
     }
-
 }
 
 
-/* ================================= */
-/* CELULAR */
-/* ================================= */
+/* AJUSTES PARA CELULAR */
 
 @media (max-width: 600px) {
-
     .tela {
         padding: 45px 16px;
     }
@@ -640,9 +515,7 @@ button:hover {
 
     .grade-cartoes,
     .grade-favoritos {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
 
@@ -672,16 +545,12 @@ button:hover {
         max-width: 250px;
         font-size: 14px;
     }
-
 }
 
 
-/* ================================= */
 /* ACESSIBILIDADE */
-/* ================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
     .coracoes span,
     .kamijo-flutuante,
     .eu-te-amo,
@@ -692,8 +561,11 @@ button:hover {
     .coracoes span {
         display: none;
     }
-
 }
+
+
+/* SUBTÍTULO DA PRIMEIRA TELA */
+
 .subtitulo-inicio {
     color: #ffb9d5;
     font-size: 14px;
@@ -711,50 +583,153 @@ button:hover {
 }
 
 
-/* ================================= */
-/* RENDINHAS DA PRIMEIRA TELA */
-/* ================================= */
+/* RENDAS E LAÇOS DA PRIMEIRA TELA */
 
-/* Mantém a decoração dentro da tela inicial */
 .inicio {
     position: relative;
     overflow: hidden;
+    padding: 78px 52px;
 }
 
-/* Moldura rendada */
+/* Moldura pontilhada */
+
 .inicio::after {
     content: "";
-
     position: absolute;
     inset: 18px;
-
     border: 2px dotted #dba5bb;
     border-radius: 22px;
-
     box-shadow:
         inset 0 0 0 7px #dba5bb12,
         0 0 0 5px #dba5bb0c;
-
     pointer-events: none;
     z-index: 2;
 }
 
-/* Mantém o texto e o botão acima da moldura */
+/* Conteúdo centralizado */
+
 .inicio .conteudo {
     position: relative;
     z-index: 3;
+    width: 100%;
+    max-width: 750px;
+    min-width: 0;
 }
 
-/* Deixa espaço entre a moldura e o conteúdo */
-.inicio {
-    padding: 65px 45px;
+/* Título responsivo */
+
+.inicio h1 {
+    max-width: 100%;
+    font-size: clamp(26px, 4vw, 45px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
 }
 
-/* Ajustes para celular */
+/* Textos */
+
+.inicio .conteudo > p {
+    max-width: 520px;
+}
+
+/* Camada dos enfeites */
+
+.inicio > .enfeites-inicio {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* Lacinhos desenhados em CSS */
+
+.inicio .laco-decorativo {
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 12px;
+
+    background: radial-gradient(
+        circle at center,
+        #ffe2ed 0 3px,
+        #c9789d 3.5px 5px,
+        transparent 5.5px
+    );
+
+    filter: drop-shadow(0 0 3px #ff9fc566);
+}
+
+.inicio .laco-decorativo::before,
+.inicio .laco-decorativo::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    width: 12px;
+    height: 10px;
+    border: 1.5px solid #ffc4db;
+    background: #a6537a88;
+}
+
+.inicio .laco-decorativo::before {
+    left: 0;
+    border-radius: 80% 20% 20% 80%;
+    transform: rotate(-20deg);
+}
+
+.inicio .laco-decorativo::after {
+    right: 0;
+    border-radius: 20% 80% 80% 20%;
+    transform: rotate(20deg);
+}
+
+/* Posições dos quatro laços */
+
+.inicio .superior-esquerdo {
+    top: 30px;
+    left: 35px;
+}
+
+.inicio .superior-direito {
+    top: 30px;
+    right: 35px;
+}
+
+.inicio .inferior-esquerdo {
+    bottom: 30px;
+    left: 35px;
+}
+
+.inicio .inferior-direito {
+    bottom: 30px;
+    right: 35px;
+}
+
+/* Flores no topo e na parte inferior */
+
+.inicio .floral {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e8a8c4;
+    font-size: 16px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    text-shadow: 0 0 5px #ff9fc544;
+}
+
+.inicio .floral-superior {
+    top: 28px;
+}
+
+.inicio .floral-inferior {
+    bottom: 28px;
+}
+
+
+/* RENDAS E LAÇOS NO CELULAR */
+
 @media (max-width: 600px) {
-
     .inicio {
-        padding: 65px 35px;
+        padding: 82px 30px;
     }
 
     .inicio::after {
@@ -762,63 +737,40 @@ button:hover {
         border-radius: 15px;
     }
 
-}
-
-/* LAÇOS DA PRIMEIRA TELA */
-
-.inicio {
-    position: relative;
-    overflow: hidden;
-}
-
-.enfeites-inicio {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 4;
-}
-
-.enfeite {
-    position: absolute;
-    display: block;
-    color: #ffc4db;
-    font-size: 30px;
-    line-height: 1;
-    text-shadow: 0 0 8px #ff91bd55;
-}
-
-.topo-esquerdo {
-    top: 30px;
-    left: 35px;
-}
-
-.topo-direito {
-    top: 30px;
-    right: 35px;
-}
-
-.baixo-esquerdo {
-    bottom: 30px;
-    left: 35px;
-}
-
-.baixo-direito {
-    bottom: 30px;
-    right: 35px;
-}
-
-@media (max-width: 600px) {
-    .enfeite {
-        font-size: 22px;
+    .inicio h1 {
+        font-size: clamp(25px, 8vw, 35px);
     }
 
-    .topo-esquerdo,
-    .baixo-esquerdo {
+    .inicio .superior-esquerdo {
+        top: 19px;
         left: 20px;
     }
 
-    .topo-direito,
-    .baixo-direito {
+    .inicio .superior-direito {
+        top: 19px;
         right: 20px;
+    }
+
+    .inicio .inferior-esquerdo {
+        bottom: 19px;
+        left: 20px;
+    }
+
+    .inicio .inferior-direito {
+        bottom: 19px;
+        right: 20px;
+    }
+
+    .inicio .floral {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .inicio .floral-superior {
+        top: 18px;
+    }
+
+    .inicio .floral-inferior {
+        bottom: 18px;
     }
 }

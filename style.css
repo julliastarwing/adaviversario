@@ -6,7 +6,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;/* MOSTRAR OS CORAÇÕES TAMBÉM NA TELA INICIAL */
+
+.inicio {
+    background: radial-gradient(
+        circle,
+        #452039,
+        #1a0d14 70%
+    );
 }
 
 html {
@@ -30,17 +37,13 @@ body {
 
 .coracoes {
     position: fixed;
-
     inset: 0;
-
     width: 100%;
     height: 100vh;
     height: 100dvh;
-
     overflow: hidden;
     pointer-events: none;
-
-    z-index: 5;
+    z-index: 9999;
 }
 
 .coracoes span {
@@ -184,6 +187,11 @@ body {
 .tela.ativa {
     display: flex;
     animation: aparecer 0.7s ease;
+}
+
+/* A tela inicial não precisa da animação de entrada */
+.inicio.ativa {
+    animation: none;
 }
 
 .conteudo {

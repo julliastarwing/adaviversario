@@ -1461,3 +1461,584 @@ button:hover {
     }
 
 }
+
+
+/* ======================================== */
+/* TELA 5 — DAVI.exe / MEMORY DATABASE */
+/* ======================================== */
+
+/* FUNDO VERDE-ESCURO COM LINHAS DE MONITOR */
+
+.favoritos {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 4px,
+            #b8d9ad06 5px
+        ),
+        radial-gradient(
+            ellipse at 50% 35%,
+            #304b39 0%,
+            #192b21 45%,
+            #0b1511 100%
+        );
+
+    padding: 75px 30px;
+}
+
+/* MOLDURA EXTERNA */
+
+.favoritos::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+
+    border: 1px solid #7b9e7e;
+
+    box-shadow:
+        inset 0 0 0 5px #b5d4ad0a,
+        0 0 30px #00000044;
+
+    pointer-events: none;
+}
+
+/* MANTÉM O CONTEÚDO NA FRENTE DO FUNDO */
+
+.favoritos .conteudo {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 760px;
+
+    font-family: "Courier New", monospace;
+}
+
+
+/* ======================================== */
+/* BARRA SUPERIOR */
+/* ======================================== */
+
+.terminal-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 13px 16px;
+
+    background: #17251d;
+
+    border: 1px solid #789b7b;
+    border-bottom: none;
+
+    color: #d4e6c9;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.terminal-status {
+    color: #a7d59f;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+
+/* ======================================== */
+/* JANELA COM CÓDIGO C# */
+/* ======================================== */
+
+.codigo-csharp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 5px;
+
+    width: 100%;
+    padding: 22px;
+
+    background: #0e1713;
+
+    border: 1px solid #789b7b;
+
+    box-shadow: 0 12px 30px #00000044;
+
+    color: #d8e2d3;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* CORES DE SINTAXE */
+
+.codigo-comentario {
+    color: #789d80;
+}
+
+.codigo-palavra {
+    color: #b4c8a2;
+}
+
+.codigo-tipo {
+    color: #e0dfad;
+}
+
+.codigo-valor {
+    color: #b2dda7;
+}
+
+.codigo-texto {
+    color: #d4dca6;
+}
+
+.codigo-vazio {
+    height: 10px;
+}
+
+.codigo-indentado {
+    padding-left: 25px;
+}
+
+
+/* ======================================== */
+/* TÍTULO DO BANCO DE MEMÓRIAS */
+/* ======================================== */
+
+.terminal-titulo {
+    width: 100%;
+
+    margin-top: 28px;
+    padding: 23px 20px;
+
+    background: #1a2c21;
+
+    border: 1px solid #789b7b;
+
+    text-align: center;
+}
+
+.terminal-etiqueta {
+    display: block;
+
+    color: #a8c5a3;
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.favoritos .terminal-titulo h2 {
+    color: #e1efd8;
+
+    font-family: "Courier New", monospace;
+    font-size: clamp(23px, 4vw, 34px);
+    font-weight: bold;
+    line-height: 1.4;
+
+    margin: 0 0 12px;
+
+    text-shadow: 0 0 15px #b6e6a522;
+}
+
+.favoritos .terminal-titulo p {
+    color: #b7cdb3;
+
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* ======================================== */
+/* GRADE COM OS QUATRO ARQUIVOS */
+/* ======================================== */
+
+.favoritos .grade-favoritos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 25px 0;
+}
+
+/* JANELINHAS */
+
+.favoritos .item-favorito {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 230px;
+
+    padding: 48px 18px 23px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #263c2d,
+            #17271d
+        );
+
+    border: 1px solid #789b7b;
+    border-radius: 0;
+
+    box-shadow:
+        inset 0 0 0 4px #b6d9aa0a,
+        5px 5px 0 #09100c;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* CABEÇALHO DOS ARQUIVOS */
+
+.favoritos .item-favorito::before {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 11px 13px;
+
+    background: #314a36;
+
+    border-bottom: 1px solid #789b7b;
+
+    color: #d2e3c9;
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    text-align: left;
+}
+
+/* NOMES INDIVIDUAIS */
+
+.favoritos .arquivo-visualkei::before {
+    content: "01 / visualkei.cs";
+}
+
+.favoritos .arquivo-musica::before {
+    content: "02 / musica.cs";
+}
+
+.favoritos .arquivo-neblina::before {
+    content: "03 / neblina.cs";
+}
+
+.favoritos .arquivo-lily::before {
+    content: "04 / lily.cs";
+}
+
+
+/* ======================================== */
+/* CONTEÚDO DOS ARQUIVOS */
+/* ======================================== */
+
+/* SÍMBOLOS */
+
+.favoritos .arquivo-simbolo {
+    display: block;
+
+    color: #d3e5c4;
+
+    font-family: Georgia, serif;
+    font-size: 43px;
+    line-height: 1;
+
+    margin-bottom: 15px;
+
+    text-shadow: 0 0 15px #a8d69d55;
+}
+
+/* TÍTULOS */
+
+.favoritos .item-favorito h3 {
+    color: #e1efd8;
+
+    font-family: "Courier New", monospace;
+    font-size: 19px;
+    font-weight: bold;
+
+    margin: 8px 0 13px;
+
+    text-align: center;
+}
+
+/* DESCRIÇÕES */
+
+.favoritos .item-favorito p {
+    color: #b9cdb5;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin: 0;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* INDICADOR LOADED */
+
+.favoritos .arquivo-status {
+    display: block;
+
+    color: #a8d69d;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    margin-top: 18px;
+}
+
+/* DETALHES DIFERENTES PARA CADA ARQUIVO */
+
+.favoritos .arquivo-visualkei .arquivo-simbolo {
+    color: #d9e5d0;
+}
+
+.favoritos .arquivo-musica .arquivo-simbolo {
+    color: #d5dfb4;
+}
+
+.favoritos .arquivo-neblina .arquivo-simbolo {
+    color: #b8d0c4;
+
+    text-shadow: 0 0 20px #b8d0c488;
+}
+
+.favoritos .arquivo-lily .arquivo-simbolo {
+    color: #d0e4a8;
+
+    text-shadow: 0 0 20px #b7d88a66;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.favoritos .item-favorito:hover {
+    transform: translateY(-5px);
+
+    border-color: #b6d9aa;
+
+    box-shadow:
+        inset 0 0 0 4px #b6d9aa12,
+        5px 10px 0 #09100c,
+        0 0 22px #b6d9aa22;
+}
+
+
+/* ======================================== */
+/* RODAPÉ DO TERMINAL */
+/* ======================================== */
+
+.terminal-rodape {
+    width: 100%;
+
+    padding: 17px 20px;
+
+    background: #0e1713;
+
+    border-left: 2px solid #a8d69d;
+
+    text-align: left;
+}
+
+.terminal-rodape p {
+    color: #a8d69d;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+/* CURSOR PISCANDO */
+
+.cursor-terminal {
+    display: inline-block;
+
+    animation:
+        piscarCursor 1s steps(1) infinite;
+}
+
+@keyframes piscarCursor {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+
+/* ======================================== */
+/* BOTÃO DE CONTINUAR */
+/* ======================================== */
+
+.favoritos .conteudo > button {
+    margin-top: 30px;
+
+    padding: 13px 30px;
+
+    background: #58775a;
+
+    border: 1px solid #c5dfb8;
+    border-radius: 0;
+
+    box-shadow: 4px 4px 0 #09100c;
+
+    color: #f0f7e9;
+
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.favoritos .conteudo > button:hover {
+    background: #729675;
+
+    transform: translateY(-2px);
+}
+
+
+/* ======================================== */
+/* AJUSTES PARA CELULAR */
+/* ======================================== */
+
+@media (max-width: 600px) {
+
+    .favoritos {
+        padding: 65px 25px;
+    }
+
+    .favoritos::before {
+        inset: 8px;
+    }
+
+    .terminal-cabecalho {
+        padding: 11px;
+
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+
+    .terminal-status {
+        font-size: 9px;
+    }
+
+    .codigo-csharp {
+        padding: 15px 11px;
+
+        font-size: 10px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .codigo-indentado {
+        padding-left: 13px;
+    }
+
+    .terminal-titulo {
+        padding: 20px 12px;
+    }
+
+    .terminal-etiqueta {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .favoritos .terminal-titulo h2 {
+        font-size: 22px;
+    }
+
+    .favoritos .grade-favoritos {
+        gap: 11px;
+    }
+
+    .favoritos .item-favorito {
+        min-height: 195px;
+
+        padding: 45px 10px 18px;
+
+        box-shadow:
+            inset 0 0 0 3px #b6d9aa0a,
+            3px 3px 0 #09100c;
+    }
+
+    .favoritos .item-favorito::before {
+        padding: 10px 7px;
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .favoritos .arquivo-simbolo {
+        font-size: 34px;
+    }
+
+    .favoritos .item-favorito h3 {
+        font-size: 14px;
+    }
+
+    .favoritos .item-favorito p {
+        font-size: 11px;
+    }
+
+    .favoritos .arquivo-status {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .terminal-rodape {
+        padding: 13px;
+    }
+
+    .terminal-rodape p {
+        font-size: 11px;
+    }
+}
+
+/* ACESSIBILIDADE: REDUZ ANIMAÇÃO */
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-terminal {
+        animation: none;
+    }
+
+    .favoritos .item-favorito {
+        transition: none;
+    }
+}

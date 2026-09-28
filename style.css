@@ -763,3 +763,122 @@ button:hover {
     }
 
 }
+
+
+/* ================================= */
+/* RENDAS E LAÇOS DA PRIMEIRA TELA */
+/* ================================= */
+
+.enfeites-inicio {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* LAÇOS */
+
+.laco {
+    position: absolute;
+
+    color: #ffc4db;
+    font-size: 34px;
+
+    text-shadow: 0 0 12px #ff91bd55;
+}
+
+/* QUATRO CANTOS */
+
+.canto-superior-esquerdo {
+    top: 22px;
+    left: 26px;
+    transform: rotate(-35deg);
+}
+
+.canto-superior-direito {
+    top: 22px;
+    right: 26px;
+    transform: rotate(35deg);
+}
+
+.canto-inferior-esquerdo {
+    bottom: 22px;
+    left: 26px;
+    transform: rotate(35deg);
+}
+
+.canto-inferior-direito {
+    bottom: 22px;
+    right: 26px;
+    transform: rotate(-35deg);
+}
+
+/* DETALHES FLORAIS */
+
+.renda {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #e8a8c4;
+
+    font-size: 17px;
+    letter-spacing: 5px;
+
+    white-space: nowrap;
+
+    opacity: 0.8;
+}
+
+.renda-superior {
+    top: 28px;
+}
+
+.renda-inferior {
+    bottom: 28px;
+}
+
+/* AJUSTES PARA CELULAR */
+
+@media (max-width: 600px) {
+
+    .laco {
+        font-size: 24px;
+    }
+
+    .canto-superior-esquerdo {
+        top: 14px;
+        left: 16px;
+    }
+
+    .canto-superior-direito {
+        top: 14px;
+        right: 16px;
+    }
+
+    .canto-inferior-esquerdo {
+        bottom: 14px;
+        left: 16px;
+    }
+
+    .canto-inferior-direito {
+        bottom: 14px;
+        right: 16px;
+    }
+
+    .renda {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .renda-superior {
+        top: 19px;
+    }
+
+    .renda-inferior {
+        bottom: 19px;
+    }
+
+}

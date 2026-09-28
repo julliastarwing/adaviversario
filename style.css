@@ -2426,3 +2426,805 @@ button:hover {
         opacity: 0;
     }
 }
+
+/* ================================================= */
+/* TELA 6 — SKETCHBOOK ROMÂNTICO */
+/* ================================================= */
+
+.meus-olhos {
+    position: relative;
+    overflow: hidden;
+
+    padding: 65px 25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #693d52 0%,
+            #3b2230 45%,
+            #1b1017 100%
+        );
+}
+
+
+/* ================================================= */
+/* FOLHA PRINCIPAL */
+/* ================================================= */
+
+.meus-olhos .pagina-sketchbook {
+    position: relative;
+
+    width: min(900px, 95%);
+    min-height: 720px;
+
+    padding: 65px 65px 45px 90px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 31px,
+            #a99b8b22 32px
+        ),
+        linear-gradient(
+            135deg,
+            #f5ead8,
+            #eadcc7
+        );
+
+    border: 1px solid #bba991;
+
+    box-shadow:
+        0 18px 45px #00000077,
+        inset 0 0 45px #866c5530;
+
+    color: #503d3d;
+
+    transform: rotate(-0.35deg);
+}
+
+
+/* pequena textura pontilhada do papel */
+
+.meus-olhos .pagina-sketchbook::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            #715c4c20 0.7px,
+            transparent 0.7px
+        );
+
+    background-size: 8px 8px;
+
+    opacity: 0.45;
+}
+
+
+/* linha vermelha de margem do caderno */
+
+.meus-olhos .pagina-sketchbook::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 67px;
+
+    width: 1px;
+
+    background: #b46f7866;
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+.meus-olhos .conteudo {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: none;
+
+    color: #503d3d;
+}
+
+
+/* ================================================= */
+/* ESPIRAL */
+/* ================================================= */
+
+.meus-olhos .espiral-sketchbook {
+    position: absolute;
+
+    top: 65px;
+    bottom: 65px;
+    left: -13px;
+
+    width: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.meus-olhos .espiral-sketchbook span {
+    position: relative;
+
+    display: block;
+
+    width: 40px;
+    height: 13px;
+
+    border: 3px solid #544c48;
+    border-right: none;
+
+    border-radius: 15px 0 0 15px;
+
+    box-shadow: 0 2px 2px #0003;
+}
+
+
+/* furinho no papel */
+
+.meus-olhos .espiral-sketchbook span::after {
+    content: "";
+
+    position: absolute;
+
+    right: -7px;
+    top: 2px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #a99783;
+
+    box-shadow:
+        inset 1px 1px 2px #0005;
+}
+
+
+/* ================================================= */
+/* CABEÇALHO */
+/* ================================================= */
+
+.meus-olhos .cabecalho-sketchbook {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+
+.meus-olhos .etiqueta-sketchbook {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #8c6670;
+
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+.meus-olhos h2 {
+    margin: 0;
+
+    color: #633f4d;
+
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 47px);
+    font-weight: normal;
+    font-style: italic;
+
+    transform: rotate(-1deg);
+
+    text-shadow: none;
+}
+
+
+.meus-olhos .sublinhado-sketchbook {
+    margin-top: -2px;
+
+    color: #9d697a;
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    transform: rotate(1deg);
+}
+
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.meus-olhos .area-sketchbook {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(230px, 0.85fr)
+        minmax(260px, 1.15fr);
+
+    align-items: center;
+
+    gap: 55px;
+
+    width: 100%;
+}
+
+
+/* ================================================= */
+/* BLOCO DA FOTO */
+/* ================================================= */
+
+.meus-olhos .bloco-foto-sketchbook {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.meus-olhos .nota-foto {
+    align-self: flex-start;
+
+    margin: 0 0 18px 10px;
+
+    color: #765963;
+
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+
+    transform: rotate(-3deg);
+}
+
+
+/* POLAROID */
+
+.meus-olhos .moldura-foto {
+    position: relative;
+
+    width: 285px;
+    max-width: 100%;
+
+    margin: 0;
+
+    padding:
+        14px
+        14px
+        18px;
+
+    background: #f8f1e6;
+
+    border: 1px solid #cbbda8;
+
+    box-shadow:
+        7px 10px 0 #826f6420,
+        0 15px 25px #46362e30;
+
+    transform: rotate(-4deg);
+}
+
+
+/* área da futura foto */
+
+.meus-olhos .espaco-foto {
+    position: relative;
+
+    height: 275px;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a78d91,
+            #735c65
+        );
+
+    color: #f8e8df;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+/* legenda da foto */
+
+.meus-olhos .moldura-foto p {
+    margin: 16px 0 2px;
+
+    color: #61464d;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+
+    text-align: center;
+
+    transform: rotate(1deg);
+}
+
+
+/* ================================================= */
+/* FITAS ADESIVAS */
+/* ================================================= */
+
+.meus-olhos .fita {
+    position: absolute;
+
+    display: block;
+
+    width: 75px;
+    height: 27px;
+
+    z-index: 4;
+
+    background: #d6b7aa99;
+
+    border-left: 1px dashed #a7867b77;
+    border-right: 1px dashed #a7867b77;
+
+    box-shadow: 0 2px 3px #0002;
+
+    pointer-events: none;
+}
+
+
+.meus-olhos .fita-esquerda {
+    top: -13px;
+    left: -25px;
+
+    transform: rotate(-35deg);
+}
+
+
+.meus-olhos .fita-direita {
+    top: -12px;
+    right: -27px;
+
+    transform: rotate(31deg);
+}
+
+
+/* rabisco abaixo da foto */
+
+.meus-olhos .mini-rabisco {
+    margin-top: 20px;
+
+    color: #986979;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+
+    letter-spacing: 7px;
+
+    transform: rotate(2deg);
+}
+
+
+/* ================================================= */
+/* TEXTO / ANOTAÇÕES */
+/* ================================================= */
+
+.meus-olhos .texto-especial {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 28px 28px 23px;
+
+    color: #503d3d;
+
+    text-align: left;
+
+    transform: rotate(1deg);
+}
+
+
+/* círculo rabiscado em volta de observations */
+
+.meus-olhos .titulo-anotacoes {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #895d6b;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.meus-olhos .titulo-anotacoes::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -8px -15px;
+
+    border: 1px solid #986979;
+
+    border-radius: 50%;
+
+    transform: rotate(-4deg);
+
+    opacity: 0.6;
+}
+
+
+.meus-olhos .texto-especial p {
+    position: relative;
+
+    margin: 0 0 27px;
+
+    color: #554243;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    text-align: left;
+}
+
+
+/* pequeno tracinho antes dos parágrafos */
+
+.meus-olhos .texto-especial p::before {
+    content: "↳";
+
+    position: absolute;
+
+    left: -23px;
+
+    color: #a06c7c;
+
+    font-family: "Courier New", monospace;
+}
+
+
+.meus-olhos .nota-final-sketchbook {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 7px 10px;
+
+    background: #d9b5bd45;
+
+    color: #76515f;
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+
+    transform: rotate(-2deg);
+}
+
+
+/* ================================================= */
+/* RABISCOS SOLTOS */
+/* ================================================= */
+
+.meus-olhos .rabiscos-sketchbook {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.meus-olhos .rabisco {
+    position: absolute;
+
+    display: block;
+
+    color: #956979;
+
+    font-family: "Courier New", monospace;
+
+    opacity: 0.75;
+}
+
+
+.meus-olhos .rabisquinho-1 {
+    top: 11%;
+    left: 12%;
+
+    font-size: 28px;
+
+    transform: rotate(-15deg);
+}
+
+
+.meus-olhos .rabisquinho-2 {
+    top: 17%;
+    right: 10%;
+
+    font-size: 24px;
+
+    transform: rotate(15deg);
+}
+
+
+.meus-olhos .rabisquinho-3 {
+    bottom: 13%;
+    left: 14%;
+
+    font-size: 19px;
+}
+
+
+.meus-olhos .rabisquinho-4 {
+    bottom: 10%;
+    right: 12%;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    transform: rotate(-5deg);
+}
+
+
+.meus-olhos .seta-foto {
+    top: 39%;
+    left: 44%;
+
+    font-size: 27px;
+
+    transform: rotate(10deg);
+}
+
+
+.meus-olhos .anotacao-foto {
+    top: 44%;
+    left: 40%;
+
+    max-width: 130px;
+
+    font-size: 10px;
+
+    transform: rotate(-7deg);
+}
+
+
+.meus-olhos .anotacao-estudo {
+    top: 7%;
+    right: 8%;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    transform: rotate(3deg);
+}
+
+
+.meus-olhos .numero-pagina {
+    right: 25px;
+    bottom: 18px;
+
+    color: #806d68;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* ================================================= */
+/* RODAPÉ DA FOLHA */
+/* ================================================= */
+
+.meus-olhos .rodape-sketchbook {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 45px;
+    padding-top: 12px;
+
+    border-top: 1px dashed #8f7a7044;
+
+    color: #8c716f;
+
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* ================================================= */
+/* BOTÃO */
+/* ================================================= */
+
+.meus-olhos .conteudo > button {
+    position: relative;
+
+    margin-top: 30px;
+
+    padding: 13px 30px;
+
+    background: #805466;
+
+    border: 1px solid #664352;
+    border-radius: 3px;
+
+    color: #fff4ee;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+
+    box-shadow:
+        4px 4px 0 #56394533;
+
+    transform: rotate(-1deg);
+}
+
+
+.meus-olhos .conteudo > button:hover {
+    background: #9b687b;
+
+    transform:
+        rotate(-1deg)
+        translateY(-3px);
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 700px) {
+
+    .meus-olhos {
+        padding: 35px 12px;
+    }
+
+
+    .meus-olhos .pagina-sketchbook {
+        width: 96%;
+
+        padding:
+            60px
+            24px
+            40px
+            52px;
+
+        transform: none;
+    }
+
+
+    .meus-olhos .pagina-sketchbook::after {
+        left: 38px;
+    }
+
+
+    .meus-olhos .espiral-sketchbook {
+        left: -15px;
+
+        width: 35px;
+    }
+
+
+    .meus-olhos .espiral-sketchbook span {
+        width: 32px;
+    }
+
+
+    .meus-olhos .area-sketchbook {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .meus-olhos .cabecalho-sketchbook {
+        margin-bottom: 35px;
+    }
+
+
+    .meus-olhos h2 {
+        font-size: 31px;
+    }
+
+
+    .meus-olhos .moldura-foto {
+        width: 250px;
+    }
+
+
+    .meus-olhos .espaco-foto {
+        height: 235px;
+    }
+
+
+    .meus-olhos .texto-especial {
+        padding:
+            20px
+            12px
+            20px
+            25px;
+    }
+
+
+    .meus-olhos .texto-especial p {
+        font-size: 15px;
+    }
+
+
+    /* tira alguns rabiscos do caminho no celular */
+
+    .meus-olhos .seta-foto,
+    .meus-olhos .anotacao-foto {
+        display: none;
+    }
+
+
+    .meus-olhos .anotacao-estudo {
+        top: 3%;
+        right: 5%;
+
+        font-size: 7px;
+    }
+
+
+    .meus-olhos .rabisquinho-1 {
+        left: 14%;
+    }
+
+
+    .meus-olhos .rabisquinho-2 {
+        right: 7%;
+    }
+
+
+    .meus-olhos .rodape-sketchbook {
+        gap: 15px;
+
+        font-size: 7px;
+    }
+}

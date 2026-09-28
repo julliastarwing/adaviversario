@@ -4334,3 +4334,514 @@ button:hover {
     }
 
 }
+
+/* ================================================= */
+/* TELA 2 — DETALHES EXTRAS DO CASTELO */
+/* ================================================= */
+
+
+/* brilho dramático atrás do Kamijo */
+
+.surpresa::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: 50%;
+    top: 48%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            #9c5d7830 0%,
+            #6e384d18 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ================================================= */
+/* CORTINAS LATERAIS */
+/* ================================================= */
+
+.surpresa .enfeites-kamijo::before,
+.surpresa .enfeites-kamijo::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 115px;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+
+/* cortina esquerda */
+
+.surpresa .enfeites-kamijo::before {
+    left: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0c070b 0%,
+            #38131f 25%,
+            #5b2233 45%,
+            #2a101b 65%,
+            transparent 100%
+        );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        75% 20%,
+        90% 40%,
+        65% 62%,
+        82% 82%,
+        55% 100%,
+        0 100%
+    );
+}
+
+
+/* cortina direita */
+
+.surpresa .enfeites-kamijo::after {
+    right: 0;
+
+    background:
+        linear-gradient(
+            -90deg,
+            #0c070b 0%,
+            #38131f 25%,
+            #5b2233 45%,
+            #2a101b 65%,
+            transparent 100%
+        );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        45% 100%,
+        18% 82%,
+        35% 62%,
+        10% 40%,
+        25% 20%
+    );
+}
+
+
+/* ================================================= */
+/* LUA */
+/* ================================================= */
+
+.surpresa .lua-kamijo {
+    position: absolute;
+
+    top: 11%;
+    right: 13%;
+
+    color: #d5b98d;
+
+    font-family: Georgia, serif;
+    font-size: 42px;
+
+    opacity: 0.55;
+
+    text-shadow:
+        0 0 12px #e7cda077,
+        0 0 30px #d9b67f33;
+
+    transform: rotate(-12deg);
+}
+
+
+/* ================================================= */
+/* ESTRELAS */
+/* ================================================= */
+
+.surpresa .estrela-kamijo {
+    position: absolute;
+
+    color: #d8b88a;
+
+    font-family: Georgia, serif;
+
+    opacity: 0.5;
+
+    text-shadow:
+        0 0 8px #e5c49288;
+
+    animation:
+        brilhoKamijo 3.5s ease-in-out infinite;
+}
+
+
+.surpresa .estrela-k1 {
+    top: 19%;
+    left: 13%;
+
+    font-size: 13px;
+}
+
+
+.surpresa .estrela-k2 {
+    top: 31%;
+    right: 18%;
+
+    font-size: 10px;
+
+    animation-delay: -1s;
+}
+
+
+.surpresa .estrela-k3 {
+    bottom: 25%;
+    left: 17%;
+
+    font-size: 9px;
+
+    animation-delay: -2s;
+}
+
+
+.surpresa .estrela-k4 {
+    bottom: 17%;
+    right: 14%;
+
+    font-size: 14px;
+
+    animation-delay: -2.7s;
+}
+
+
+@keyframes brilhoKamijo {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* ================================================= */
+/* CORRENTES / PINGENTES */
+/* ================================================= */
+
+.surpresa .corrente-kamijo {
+    position: absolute;
+
+    top: 17%;
+
+    color: #b99a6e;
+
+    font-family: Georgia, serif;
+    font-size: 11px;
+    line-height: 1.45;
+
+    text-align: center;
+
+    opacity: 0.5;
+}
+
+
+.surpresa .corrente-esquerda {
+    left: 7%;
+}
+
+
+.surpresa .corrente-direita {
+    right: 7%;
+}
+
+
+/* ================================================= */
+/* ORNAMENTOS LATERAIS */
+/* ================================================= */
+
+.surpresa .ornamento-lateral-kamijo {
+    position: absolute;
+
+    top: 50%;
+
+    color: #c1a174;
+
+    font-family: Georgia, serif;
+    font-size: 34px;
+
+    opacity: 0.4;
+}
+
+
+.surpresa .ornamento-k-esq {
+    left: 6%;
+
+    transform:
+        translateY(-50%)
+        rotate(-20deg);
+}
+
+
+.surpresa .ornamento-k-dir {
+    right: 6%;
+
+    transform:
+        translateY(-50%)
+        scaleX(-1)
+        rotate(-20deg);
+}
+
+
+/* ================================================= */
+/* CONTEÚDO NA FRENTE */
+/* ================================================= */
+
+.surpresa .conteudo {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* título mais aristocrático */
+
+.surpresa h2 {
+    position: relative;
+
+    color: #e5c49a;
+
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px #d8af7a33;
+}
+
+
+/* ornamento debaixo do título */
+
+.surpresa h2::after {
+    content: "──── ✦ ────";
+
+    display: block;
+
+    margin-top: 13px;
+
+    color: #a98660;
+
+    font-size: 10px;
+    font-style: normal;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+}
+
+
+/* ================================================= */
+/* BALÃO DO KAMIJO */
+/* ================================================= */
+
+.surpresa .balao {
+    background:
+        linear-gradient(
+            145deg,
+            #f1e5d4,
+            #dfcdb8
+        );
+
+    color: #402631;
+
+    border: 1px solid #b9976b;
+    border-radius: 4px;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    box-shadow:
+        5px 7px 0 #08040566,
+        0 0 20px #c69b6a18;
+}
+
+
+.surpresa .balao::after {
+    border-top-color: #dfcdb8;
+}
+
+
+/* ================================================= */
+/* FOTO DO KAMIJO */
+/* ================================================= */
+
+.surpresa .kamijo-flutuante img {
+    position: relative;
+
+    border: 3px double #c5a16e;
+
+    box-shadow:
+        0 0 0 6px #6c3545,
+        0 0 0 7px #a98660,
+        0 12px 30px #000a,
+        0 0 25px #c58a9a22;
+
+    filter:
+        saturate(0.88)
+        contrast(1.05);
+}
+
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.surpresa .conteudo > p {
+    max-width: 590px;
+
+    color: #eadce0;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.85;
+
+    text-shadow:
+        0 1px 5px #0007;
+}
+
+
+/* ================================================= */
+/* BOTÃO */
+/* ================================================= */
+
+.surpresa .conteudo > button {
+    margin-top: 22px;
+
+    padding: 13px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #704052,
+            #472533
+        );
+
+    border: 1px solid #c4a16e;
+    border-radius: 3px;
+
+    color: #ecd7bc;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+
+    box-shadow:
+        4px 5px 0 #09050788;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.surpresa .conteudo > button::before {
+    content: "♱";
+
+    margin-right: 9px;
+
+    color: #c7a675;
+}
+
+
+.surpresa .conteudo > button:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #895268,
+            #563043
+        );
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .surpresa .enfeites-kamijo::before,
+    .surpresa .enfeites-kamijo::after {
+        width: 65px;
+        opacity: 0.35;
+    }
+
+
+    .surpresa .lua-kamijo {
+        top: 8%;
+        right: 9%;
+
+        font-size: 29px;
+    }
+
+
+    .surpresa .corrente-kamijo {
+        display: none;
+    }
+
+
+    .surpresa .ornamento-lateral-kamijo {
+        font-size: 22px;
+
+        opacity: 0.25;
+    }
+
+
+    .surpresa .ornamento-k-esq {
+        left: 4%;
+    }
+
+
+    .surpresa .ornamento-k-dir {
+        right: 4%;
+    }
+
+
+    .surpresa .estrela-k1 {
+        left: 8%;
+    }
+
+
+    .surpresa .estrela-k2 {
+        right: 9%;
+    }
+
+
+    .surpresa .conteudo > p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+}

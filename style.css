@@ -694,3 +694,18 @@ button:hover {
     }
 
 }
+.subtitulo-inicio {
+    color: #ffb9d5;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+
+.inicio h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.inicio .conteudo > p:not(.subtitulo-inicio) {
+    max-width: 520px;
+}
